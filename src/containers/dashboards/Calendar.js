@@ -5,7 +5,7 @@ import moment from 'moment';
 
 import CalendarToolbar from 'components/CalendarToolbar';
 import IntlMessages from 'helpers/IntlMessages';
-import data from '../../data/events';
+import data from 'data/events';
 
 import { getDirection } from 'helpers/Utils';
 

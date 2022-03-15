@@ -3,6 +3,7 @@ import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import AppLayout from 'layout/AppLayout';
+// import { ProtectedRoute, UserRole } from 'helpers/authHelper';
 
 const Gogo = React.lazy(() =>
   import(/* webpackChunkName: "viwes-gogo" */ './gogo')
@@ -29,6 +30,11 @@ const App = ({ match }) => {
               path={`${match.url}/second-menu`}
               render={(props) => <SecondMenu {...props} />}
             />
+            {/* <ProtectedRoute
+                    path={`${match.url}/second-menu`}
+                    component={SecondMenu}
+                    roles={[UserRole.Admin]}
+            /> */}
             <Route
               path={`${match.url}/blank-page`}
               render={(props) => <BlankPage {...props} />}

@@ -9,7 +9,7 @@ import {
   MENU_CLICK_MOBILE_MENU,
   MENU_CHANGE_DEFAULT_CLASSES,
   MENU_CHANGE_HAS_SUB_ITEM_STATUS,
-} from '../constants';
+} from '../contants';
 
 const INIT_STATE = {
   containerClassnames: defaultMenuType,

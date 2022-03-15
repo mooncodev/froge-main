@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { injectIntl } from 'react-intl';
 import ReactAutoSuggest from 'components/common/ReactAutoSuggest';
-import cakes from '../../data/cakes';
+import cakes from 'data/cakes';
 
 const data = cakes.map((item) => {
   return { name: item.title };

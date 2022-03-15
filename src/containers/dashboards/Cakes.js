@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import IntlMessages from 'helpers/IntlMessages';
-import data from '../../data/cakes';
+import data from 'data/cakes';
 
 const Cakes = () => {
   return (

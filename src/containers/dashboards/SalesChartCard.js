@@ -12,7 +12,7 @@ import {
 import IntlMessages from 'helpers/IntlMessages';
 import { LineChart } from 'components/charts';
 
-import { lineChartData } from '../../data/charts';
+import { lineChartData } from 'data/charts';
 
 const SalesChartCard = () => {
   return (

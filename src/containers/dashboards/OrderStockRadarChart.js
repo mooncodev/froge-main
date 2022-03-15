@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 import IntlMessages from 'helpers/IntlMessages';
 import { RadarChart } from 'components/charts';
 
-import { radarChartData } from '../../data/charts';
+import { radarChartData } from 'data/charts';
 
 const OrderStockRadarChart = () => {
   return (

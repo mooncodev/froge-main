@@ -4,7 +4,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import IntlMessages from 'helpers/IntlMessages';
-import data from '../../data/logs';
+import data from 'data/logs';
 
 const Logs = () => {
   return (

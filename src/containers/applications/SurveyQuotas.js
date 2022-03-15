@@ -4,7 +4,7 @@ import { Card, CardBody } from 'reactstrap';
 import { Colxx } from 'components/common/CustomBootstrap';
 import SurveyQuota from 'components/applications/SurveyQuota';
 
-import quotas from '../../data/survey.quotas';
+import quotas from 'data/survey.quotas';
 
 const SurveyQuotas = () => {
   return (

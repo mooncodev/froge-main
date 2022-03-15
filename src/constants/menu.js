@@ -1,5 +1,4 @@
 import { adminRoot } from './defaultValues';
-// import { UserRole } from "helpers/authHelper"
 
 const data = [
   {
@@ -7,7 +6,6 @@ const data = [
     icon: 'iconsminds-air-balloon-1',
     label: 'menu.gogo',
     to: `${adminRoot}/gogo`,
-    // roles: [UserRole.Admin, UserRole.Editor],
     subs: [
       {
         icon: 'simple-icon-paper-plane',
@@ -21,6 +19,7 @@ const data = [
     icon: 'iconsminds-three-arrow-fork',
     label: 'menu.second-menu',
     to: `${adminRoot}/second-menu`,
+    // roles: [UserRole.Admin, UserRole.Editor],
     subs: [
       {
         icon: 'simple-icon-paper-plane',

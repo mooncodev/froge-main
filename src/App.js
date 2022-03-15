@@ -7,11 +7,17 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
+import './helpers/Firebase';
 import AppLocale from './lang';
 import ColorSwitcher from './components/common/ColorSwitcher';
 import { NotificationContainer } from './components/common/react-notifications';
-import { isMultiColorActive, adminRoot } from './constants/defaultValues';
+import {
+  isMultiColorActive,
+  adminRoot,
+  UserRole,
+} from './constants/defaultValues';
 import { getDirection } from './helpers/Utils';
+import { ProtectedRoute } from './helpers/authHelper';
 
 const ViewHome = React.lazy(() =>
   import(/* webpackChunkName: "views" */ './views/home')
@@ -19,9 +25,14 @@ const ViewHome = React.lazy(() =>
 const ViewApp = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ './views/app')
 );
-
+const ViewUser = React.lazy(() =>
+  import(/* webpackChunkName: "views-user" */ './views/user')
+);
 const ViewError = React.lazy(() =>
   import(/* webpackChunkName: "views-error" */ './views/error')
+);
+const ViewUnauthorized = React.lazy(() =>
+  import(/* webpackChunkName: "views-error" */ './views/unauthorized')
 );
 
 class App extends React.Component {
@@ -53,9 +64,14 @@ class App extends React.Component {
             <Suspense fallback={<div className="loading" />}>
               <Router>
                 <Switch>
-                  <Route
+                  <ProtectedRoute
                     path={adminRoot}
-                    render={(props) => <ViewApp {...props} />}
+                    component={ViewApp}
+                    roles={[UserRole.Admin, UserRole.Editor]}
+                  />
+                  <Route
+                    path="/user"
+                    render={(props) => <ViewUser {...props} />}
                   />
                   <Route
                     path="/error"
@@ -63,11 +79,15 @@ class App extends React.Component {
                     render={(props) => <ViewError {...props} />}
                   />
                   <Route
+                    path="/unauthorized"
+                    exact
+                    render={(props) => <ViewUnauthorized {...props} />}
+                  />
+                  <Route
                     path="/"
                     exact
                     render={(props) => <ViewHome {...props} />}
                   />
-                  <Redirect to="/error" />
                   {/*
                   <Redirect exact from="/" to={adminRoot} />
                   */}
@@ -82,9 +102,10 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ settings }) => {
+const mapStateToProps = ({ authUser, settings }) => {
+  const { currentUser } = authUser;
   const { locale } = settings;
-  return { locale };
+  return { currentUser, locale };
 };
 const mapActionsToProps = {};
 

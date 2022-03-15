@@ -11,7 +11,7 @@ import classnames from 'classnames';
 import IntlMessages from 'helpers/IntlMessages';
 import DatatablePagination from 'components/DatatablePagination';
 
-import products from '../../data/products';
+import products from 'data/products';
 
 function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
   const {

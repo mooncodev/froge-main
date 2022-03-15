@@ -15,9 +15,11 @@ import {
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import IntlMessages from 'helpers/IntlMessages';
 import {
   setContainerClassnames,
   clickOnMobileMenu,
+  logoutUser,
   changeLocale,
 } from 'redux/actions';
 
@@ -26,6 +28,7 @@ import {
   searchPath,
   localeOptions,
   isDarkSwitchActive,
+  buyUrl,
   adminRoot,
 } from 'constants/defaultValues';
 
@@ -44,6 +47,7 @@ const TopNav = ({
   locale,
   setContainerClassnamesAction,
   clickOnMobileMenuAction,
+  logoutUserAction,
   changeLocaleAction,
 }) => {
   const [isInFullScreen, setIsInFullScreen] = useState(false);
@@ -173,7 +177,7 @@ const TopNav = ({
   };
 
   const handleLogout = () => {
-    console.log('logout');
+    logoutUserAction(history);
   };
 
   const menuButtonClick = (e, _clickCount, _conClassnames) => {
@@ -260,6 +264,15 @@ const TopNav = ({
             </DropdownMenu>
           </UncontrolledDropdown>
         </div>
+        <div className="position-relative d-none d-none d-lg-inline-block">
+          <a
+            className="btn btn-outline-primary btn-sm ml-2"
+            target="_top"
+            href={buyUrl}
+          >
+            <IntlMessages id="user.buy" />
+          </a>
+        </div>
       </div>
       <NavLink className="navbar-logo" to={adminRoot}>
         <span className="logo d-none d-xs-block" />
@@ -323,6 +336,7 @@ export default injectIntl(
   connect(mapStateToProps, {
     setContainerClassnamesAction: setContainerClassnames,
     clickOnMobileMenuAction: clickOnMobileMenu,
+    logoutUserAction: logoutUser,
     changeLocaleAction: changeLocale,
   })(TopNav)
 );

@@ -9,7 +9,7 @@ import { Card, CardBody, CardTitle } from 'reactstrap'; //
 import DatatablePagination from 'components/DatatablePagination';
 import IntlMessages from 'helpers/IntlMessages';
 
-import products from '../../data/products';
+import products from 'data/products';
 
 function Table({ columns, data }) {
   const {

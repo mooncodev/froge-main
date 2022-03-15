@@ -529,7 +529,7 @@ class Sidebar extends Component {
   }
 }
 
-const mapStateToProps = ({ menu }) => {
+const mapStateToProps = ({ menu, authUser }) => {
   const {
     containerClassnames,
     subHiddenBreakpoint,
@@ -538,12 +538,14 @@ const mapStateToProps = ({ menu }) => {
     selectedMenuHasSubItems,
   } = menu;
 
+  const { currentUser } = authUser;
   return {
     containerClassnames,
     subHiddenBreakpoint,
     menuHiddenBreakpoint,
     menuClickCount,
     selectedMenuHasSubItems,
+    currentUser,
   };
 };
 export default withRouter(
