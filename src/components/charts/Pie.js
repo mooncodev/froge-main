@@ -1,8 +1,8 @@
 /* eslint-disable prefer-rest-params */
-import React, { useEffect, useRef, useState } from "react";
-import { Chart } from "chart.js";
+import React, { useEffect, useRef, useState } from 'react';
+import { Chart } from 'chart.js';
 
-import { pieChartOptions } from "./config";
+import { pieChartOptions } from './config';
 
 const Pie = ({ data, shadow = false }) => {
   const chartContainer = useRef(null);
@@ -19,7 +19,7 @@ const Pie = ({ data, shadow = false }) => {
               chart: { ctx },
             } = this;
             ctx.save();
-            ctx.shadowColor = "rgba(0,0,0,0.15)";
+            ctx.shadowColor = 'rgba(0,0,0,0.15)';
             ctx.shadowBlur = 10;
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 10;
@@ -29,9 +29,9 @@ const Pie = ({ data, shadow = false }) => {
           },
         });
       }
-      const context = chartContainer.current.getContext("2d");
+      const context = chartContainer.current.getContext('2d');
       const newChartInstance = new Chart(context, {
-        type: shadow ? "pieWithShadow" : "pie",
+        type: shadow ? 'pieWithShadow' : 'pie',
         options: pieChartOptions,
         data,
       });

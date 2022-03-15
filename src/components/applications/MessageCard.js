@@ -1,12 +1,12 @@
-import React from "react";
-import { Card, CardBody } from "reactstrap";
+import React from 'react';
+import { Card, CardBody } from 'reactstrap';
 
 const MessageCard = ({ sender, item, currentUserid }) => {
   return (
     <>
       <Card
         className={`d-inline-block mb-3 float-${
-          item.sender !== currentUserid ? "left" : "right"
+          item.sender !== currentUserid ? 'left' : 'right'
         }`}
       >
         <div className="position-absolute  pt-1 pr-2 r-0">

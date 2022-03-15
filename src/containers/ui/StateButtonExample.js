@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-promise-reject-errors */
-import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import React from 'react';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
-import IntlMessages from "helpers/IntlMessages";
-import { Colxx } from "components/common/CustomBootstrap";
+import IntlMessages from 'helpers/IntlMessages';
+import { Colxx } from 'components/common/CustomBootstrap';
 
-import StateButton from "components/StateButton";
+import StateButton from 'components/StateButton';
 
 const StateButtonExample = () => {
   const handleSuccessButtonClick = () => {
     return new Promise((success, fail) => {
       setTimeout(() => {
-        success("Everything went right!");
+        success('Everything went right!');
       }, 2000);
     });
   };
@@ -20,7 +20,7 @@ const StateButtonExample = () => {
   const handleFailButtonClick = () => {
     return new Promise((success, fail) => {
       setTimeout(() => {
-        fail("Something is wrong!");
+        fail('Something is wrong!');
       }, 2000);
     });
   };

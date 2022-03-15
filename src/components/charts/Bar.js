@@ -1,8 +1,8 @@
 /* eslint-disable prefer-rest-params */
-import React, { useEffect, useRef, useState } from "react";
-import { Chart } from "chart.js";
+import React, { useEffect, useRef, useState } from 'react';
+import { Chart } from 'chart.js';
 
-import { barChartOptions } from "./config";
+import { barChartOptions } from './config';
 
 const Bar = ({ data, shadow = false }) => {
   const chartContainer = useRef(null);
@@ -21,7 +21,7 @@ const Bar = ({ data, shadow = false }) => {
               chart: { ctx },
             } = this;
             ctx.save();
-            ctx.shadowColor = "rgba(0,0,0,0.2)";
+            ctx.shadowColor = 'rgba(0,0,0,0.2)';
             ctx.shadowBlur = 7;
             ctx.shadowOffsetX = 5;
             ctx.shadowOffsetY = 7;
@@ -31,9 +31,9 @@ const Bar = ({ data, shadow = false }) => {
           },
         });
       }
-      const context = chartContainer.current.getContext("2d");
+      const context = chartContainer.current.getContext('2d');
       const newChartInstance = new Chart(context, {
-        type: shadow ? "barWithShadow" : "bar",
+        type: shadow ? 'barWithShadow' : 'bar',
         options: barChartOptions,
         data,
       });

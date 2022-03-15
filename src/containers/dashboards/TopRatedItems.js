@@ -1,9 +1,9 @@
-import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
-import IntlMessages from "helpers/IntlMessages";
-import Rating from "components/common/Rating";
-import GlideComponent from "components/carousel/GlideComponent";
-import data from "../../data/topRatedItems";
+import React from 'react';
+import { Card, CardBody, CardTitle } from 'reactstrap';
+import IntlMessages from 'helpers/IntlMessages';
+import Rating from 'components/common/Rating';
+import GlideComponent from 'components/carousel/GlideComponent';
+import data from '../../data/topRatedItems';
 
 const TopRatedItem = ({ image, order, title, rate, rateCount }) => (
   <div>
@@ -28,7 +28,7 @@ const TopRatedItems = () => {
           settings={{
             gap: 5,
             perView: 1,
-            type: "carousel",
+            type: 'carousel',
             peek: { before: 0, after: 100 },
             breakpoints: {
               480: { perView: 1 },

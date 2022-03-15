@@ -1,12 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import { Progress } from "reactstrap";
+import React from 'react';
+import { Progress } from 'reactstrap';
 
 const SurveyQuota = ({
-  title = "Gender",
+  title = 'Gender',
   data = [
-    { title: "Male", count: 105, quota: 125 },
-    { title: "Female", count: 90, quota: 125 },
+    { title: 'Male', count: 105, quota: 125 },
+    { title: 'Female', count: 90, quota: 125 },
   ],
 }) => {
   const reducer = (accumulator, currentValue) => accumulator + currentValue;

@@ -1,10 +1,10 @@
-import React from "react";
-import { Row } from "reactstrap";
-import Pagination from "./Pagination";
-import ContextMenuContainer from "./ContextMenuContainer";
-import DataListView from "./DataListView";
-import ImageListView from "./ImageListView";
-import ThumbListView from "./ThumbListView";
+import React from 'react';
+import { Row } from 'reactstrap';
+import Pagination from './Pagination';
+import ContextMenuContainer from './ContextMenuContainer';
+import DataListView from './DataListView';
+import ImageListView from './ImageListView';
+import ThumbListView from './ThumbListView';
 
 function collect(props) {
   return { data: props.data };
@@ -24,7 +24,7 @@ const ListPageListing = ({
   return (
     <Row>
       {items.map((product) => {
-        if (displayMode === "imagelist") {
+        if (displayMode === 'imagelist') {
           return (
             <ImageListView
               key={product.id}
@@ -35,7 +35,7 @@ const ListPageListing = ({
             />
           );
         }
-        if (displayMode === "thumblist") {
+        if (displayMode === 'thumblist') {
           return (
             <ThumbListView
               key={product.id}

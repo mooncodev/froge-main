@@ -1,12 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import { NavLink } from "react-router-dom";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
-import IntlMessages from "helpers/IntlMessages";
-import { appRoot } from "constants/defaultValues";
-import data from "../../data/tickets";
+import IntlMessages from 'helpers/IntlMessages';
+import { appRoot } from 'constants/defaultValues';
+import data from '../../data/tickets';
 
 const Tickets = () => {
   return (

@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
-import PropTypes from "prop-types";
-import Glide from "@glidejs/glide";
-import { getDirection } from "helpers/Utils";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+import React, { useEffect, useState, useRef } from 'react';
+import PropTypes from 'prop-types';
+import Glide from '@glidejs/glide';
+import { getDirection } from 'helpers/Utils';
+import '@glidejs/glide/dist/css/glide.core.min.css';
+import '@glidejs/glide/dist/css/glide.theme.min.css';
 
 let resizeTimeOut = -1;
 let mountTimeOut = -1;
@@ -57,10 +57,10 @@ function GlideComponentThumbs(props = defaultProps) {
     const gap = carouselThumbs.index + thumbsPerView;
     setactiveIndex(carouselImages.index);
     if (activeIndex >= gap) {
-      carouselThumbs.go(">");
+      carouselThumbs.go('>');
     }
     if (activeIndex < carouselThumbs.index) {
-      carouselThumbs.go("<");
+      carouselThumbs.go('<');
     }
   };
 
@@ -86,7 +86,7 @@ function GlideComponentThumbs(props = defaultProps) {
     });
     carouselImages.mount();
     // eslint-disable-next-line no-use-before-define
-    carouselImages.on("swipe.end", imagesSwipeEnd);
+    carouselImages.on('swipe.end', imagesSwipeEnd);
 
     /* glideCarouselThumbs init */
     carouselThumbs = new Glide(glideCarouselThumbs.current, {
@@ -94,13 +94,13 @@ function GlideComponentThumbs(props = defaultProps) {
       direction: getDirection().direction,
     });
     carouselThumbs.mount();
-    carouselThumbs.on("resize", thumbsResize);
+    carouselThumbs.on('resize', thumbsResize);
 
     mountTimeOut = setTimeout(() => {
-      const event = document.createEvent("HTMLEvents");
-      event.initEvent("resize", false, false);
+      const event = document.createEvent('HTMLEvents');
+      event.initEvent('resize', false, false);
       window.dispatchEvent(event);
-      carouselImages.on("resize", onResize);
+      carouselImages.on('resize', onResize);
     }, 500);
 
     updateThumbBreakpoints();
@@ -147,8 +147,8 @@ function GlideComponentThumbs(props = defaultProps) {
                 <div
                   className={
                     index === activeIndex
-                      ? "glide__slide active"
-                      : "glide__slide"
+                      ? 'glide__slide active'
+                      : 'glide__slide'
                   }
                   key={item.id}
                   onClick={() => {

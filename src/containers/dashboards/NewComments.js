@@ -1,16 +1,16 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { Card, CardBody, CardTitle } from 'reactstrap';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { NavLink } from 'react-router-dom';
 
-import IntlMessages from "helpers/IntlMessages";
+import IntlMessages from 'helpers/IntlMessages';
 
-import Rating from "components/common/Rating";
-import { appRoot } from "constants/defaultValues";
-import { comments } from "../../data/comments";
+import Rating from 'components/common/Rating';
+import { appRoot } from 'constants/defaultValues';
+import { comments } from '../../data/comments';
 
-const NewComments = ({ className = "", displayRate = false }) => {
+const NewComments = ({ className = '', displayRate = false }) => {
   return (
     <Card className={className}>
       <CardBody>

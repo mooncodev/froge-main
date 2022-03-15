@@ -1,8 +1,8 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 import {
   Row,
   Card,
@@ -11,39 +11,39 @@ import {
   Label,
   Button,
   CardTitle,
-} from "reactstrap";
-import IntlMessages from "helpers/IntlMessages";
-import { Colxx } from "components/common/CustomBootstrap";
+} from 'reactstrap';
+import IntlMessages from 'helpers/IntlMessages';
+import { Colxx } from 'components/common/CustomBootstrap';
 import {
   FormikReactSelect,
   FormikTagsInput,
   FormikDatePicker,
-} from "./FormikFields";
+} from './FormikFields';
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string()
-    .email("Invalid email address")
-    .required("Email is required!"),
-  password: Yup.string().required("Password is required!"),
+    .email('Invalid email address')
+    .required('Email is required!'),
+  password: Yup.string().required('Password is required!'),
   tags: Yup.array()
-    .min(3, "Pick at least 3 tags")
-    .required("At least one tag is required"),
-  date: Yup.date().nullable().required("Date required"),
+    .min(3, 'Pick at least 3 tags')
+    .required('At least one tag is required'),
+  date: Yup.date().nullable().required('Date required'),
   state: Yup.object()
     .shape({
       label: Yup.string().required(),
       value: Yup.string().required(),
     })
     .nullable()
-    .required("State is required!"),
+    .required('State is required!'),
 });
 
 const options = [
-  { value: "food", label: "Food" },
-  { value: "beingfabulous", label: "Being Fabulous", disabled: true },
-  { value: "reasonml", label: "ReasonML" },
-  { value: "unicorns", label: "Unicorns" },
-  { value: "kittens", label: "Kittens" },
+  { value: 'food', label: 'Food' },
+  { value: 'beingfabulous', label: 'Being Fabulous', disabled: true },
+  { value: 'reasonml', label: 'ReasonML' },
+  { value: 'unicorns', label: 'Unicorns' },
+  { value: 'kittens', label: 'Kittens' },
 ];
 
 const FormikCustomWithTopLabels = () => {
@@ -70,11 +70,11 @@ const FormikCustomWithTopLabels = () => {
 
               <Formik
                 initialValues={{
-                  email: "test@test.com",
-                  password: "",
+                  email: 'test@test.com',
+                  password: '',
                   tags: [],
                   date: null,
-                  state: { value: "reasonml", label: "ReasonML" },
+                  state: { value: 'reasonml', label: 'ReasonML' },
                 }}
                 validationSchema={SignupSchema}
                 onSubmit={onSubmit}
@@ -193,11 +193,11 @@ const FormikCustomWithTopLabels = () => {
 
               <Formik
                 initialValues={{
-                  email: "test@test.com",
-                  password: "",
+                  email: 'test@test.com',
+                  password: '',
                   tags: [],
                   date: null,
-                  state: { value: "reasonml", label: "ReasonML" },
+                  state: { value: 'reasonml', label: 'ReasonML' },
                 }}
                 validationSchema={SignupSchema}
                 onSubmit={onSubmit}

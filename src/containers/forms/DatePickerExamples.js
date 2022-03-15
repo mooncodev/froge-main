@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
-import { injectIntl } from "react-intl";
-import { Row, Card, CardBody, CardTitle } from "reactstrap";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import React, { useState } from 'react';
+import { injectIntl } from 'react-intl';
+import { Row, Card, CardBody, CardTitle } from 'reactstrap';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-import IntlMessages from "helpers/IntlMessages";
-import { Colxx } from "components/common/CustomBootstrap";
+import IntlMessages from 'helpers/IntlMessages';
+import { Colxx } from 'components/common/CustomBootstrap';
 
 const DatePickerExamples = ({ intl }) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -32,7 +32,7 @@ const DatePickerExamples = ({ intl }) => {
               <DatePicker
                 selected={startDate}
                 onChange={setStartDate}
-                placeholderText={messages["forms.date"]}
+                placeholderText={messages['forms.date']}
               />
             </div>
             <label>
@@ -46,7 +46,7 @@ const DatePickerExamples = ({ intl }) => {
                   startDate={startDateRange}
                   endDate={endDateRange}
                   onChange={setStartDateRange}
-                  placeholderText={messages["form-components.start"]}
+                  placeholderText={messages['form-components.start']}
                 />
               </Colxx>
               <Colxx xxs="6">
@@ -56,7 +56,7 @@ const DatePickerExamples = ({ intl }) => {
                   startDate={startDateRange}
                   endDate={endDateRange}
                   onChange={setEndDateRange}
-                  placeholderText={messages["form-components.end"]}
+                  placeholderText={messages['form-components.end']}
                 />
               </Colxx>
             </Row>
@@ -68,7 +68,7 @@ const DatePickerExamples = ({ intl }) => {
                 <DatePicker
                   selected={startDateTime}
                   onChange={setStartDateTime}
-                  placeholderText={messages["forms.date"]}
+                  placeholderText={messages['forms.date']}
                   showTimeSelect
                   timeFormat="HH:mm"
                   timeIntervals={15}

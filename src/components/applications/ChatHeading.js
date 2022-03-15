@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const ChatHeading = ({ name, thumb, lastSeenDate }) => {
   return (
@@ -18,7 +18,7 @@ const ChatHeading = ({ name, thumb, lastSeenDate }) => {
                 <p className="list-item-heading mb-1 truncate ">{name}</p>
               </div>
               <p className="mb-0 text-muted text-small">
-                {lastSeenDate === "0" ? "-" : lastSeenDate}
+                {lastSeenDate === '0' ? '-' : lastSeenDate}
               </p>
             </div>
           </div>

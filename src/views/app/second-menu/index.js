@@ -1,8 +1,8 @@
-import React, { Suspense } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 const Second = React.lazy(() =>
-  import(/* webpackChunkName: "second" */ "./second")
+  import(/* webpackChunkName: "second" */ './second')
 );
 const SecondMenu = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>

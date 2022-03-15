@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import NotificationManager from "./NotificationManager";
-import Notifications from "./Notifications";
+import React from 'react';
+import PropTypes from 'prop-types';
+import NotificationManager from './NotificationManager';
+import Notifications from './Notifications';
 
 class NotificationContainer extends React.Component {
   constructor(props) {

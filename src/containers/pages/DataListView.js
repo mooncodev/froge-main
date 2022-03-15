@@ -1,9 +1,9 @@
-import React from "react";
-import { Card, CustomInput, Badge } from "reactstrap";
-import { NavLink } from "react-router-dom";
-import classnames from "classnames";
-import { ContextMenuTrigger } from "react-contextmenu";
-import { Colxx } from "components/common/CustomBootstrap";
+import React from 'react';
+import { Card, CustomInput, Badge } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
+import classnames from 'classnames';
+import { ContextMenuTrigger } from 'react-contextmenu';
+import { Colxx } from 'components/common/CustomBootstrap';
 
 const DataListView = ({ product, isSelect, collect, onCheckItem }) => {
   return (
@@ -11,7 +11,7 @@ const DataListView = ({ product, isSelect, collect, onCheckItem }) => {
       <ContextMenuTrigger id="menu_id" data={product.id} collect={collect}>
         <Card
           onClick={(event) => onCheckItem(event, product.id)}
-          className={classnames("d-flex flex-row", {
+          className={classnames('d-flex flex-row', {
             active: isSelect,
           })}
         >

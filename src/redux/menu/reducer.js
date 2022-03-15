@@ -2,21 +2,21 @@ import {
   defaultMenuType,
   subHiddenBreakpoint,
   menuHiddenBreakpoint,
-} from "constants/defaultValues";
+} from 'constants/defaultValues';
 import {
   MENU_SET_CLASSNAMES,
   MENU_CONTAINER_ADD_CLASSNAME,
   MENU_CLICK_MOBILE_MENU,
   MENU_CHANGE_DEFAULT_CLASSES,
   MENU_CHANGE_HAS_SUB_ITEM_STATUS,
-} from "../constants";
+} from '../constants';
 
 const INIT_STATE = {
   containerClassnames: defaultMenuType,
   subHiddenBreakpoint,
   menuHiddenBreakpoint,
   menuClickCount: 0,
-  selectedMenuHasSubItems: defaultMenuType === "menu-default", // if you use menu-sub-hidden as default menu type, set value of this variable to false
+  selectedMenuHasSubItems: defaultMenuType === 'menu-default', // if you use menu-sub-hidden as default menu type, set value of this variable to false
 };
 
 export default (state = INIT_STATE, action) => {

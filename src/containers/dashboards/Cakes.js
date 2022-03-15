@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
-import IntlMessages from "helpers/IntlMessages";
-import data from "../../data/cakes";
+import IntlMessages from 'helpers/IntlMessages';
+import data from '../../data/cakes';
 
 const Cakes = () => {
   return (

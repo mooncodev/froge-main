@@ -58,7 +58,8 @@
     "prettier/prettier": [
       "warn"
     ],
-    "eslint linebreak-style": [0, "error", "windows"]
+    "eslint linebreak-style": [0, "error", "windows"],
+    "quotes": ["warn", "single"]
   },
   "globals": {
     "window": true,

@@ -1,17 +1,17 @@
-import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import React from 'react';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
-import { Colxx } from "components/common/CustomBootstrap";
-import { ThemeColors } from "helpers/ThemeColors";
-import { DoughnutChart } from "components/charts";
+import { Colxx } from 'components/common/CustomBootstrap';
+import { ThemeColors } from 'helpers/ThemeColors';
+import { DoughnutChart } from 'components/charts';
 
 const colors = ThemeColors();
 
 const ageChartData = {
-  labels: ["12-24", "24-30", "30-40", "40-50", "50-60"],
+  labels: ['12-24', '24-30', '30-40', '40-50', '50-60'],
   datasets: [
     {
-      label: "",
+      label: '',
       borderColor: [
         colors.themeColor1,
         colors.themeColor2,
@@ -32,10 +32,10 @@ const ageChartData = {
   ],
 };
 const genderChartData = {
-  labels: ["Male", "Female", "Other"],
+  labels: ['Male', 'Female', 'Other'],
   datasets: [
     {
-      label: "",
+      label: '',
       borderColor: [colors.themeColor1, colors.themeColor2, colors.themeColor3],
       backgroundColor: [
         colors.themeColor1_10,
@@ -49,14 +49,14 @@ const genderChartData = {
 };
 const workChartData = {
   labels: [
-    "Employed for wages",
-    "Self-employed",
-    "Looking for work",
-    "Retired",
+    'Employed for wages',
+    'Self-employed',
+    'Looking for work',
+    'Retired',
   ],
   datasets: [
     {
-      label: "",
+      label: '',
       borderColor: [
         colors.themeColor1,
         colors.themeColor2,
@@ -75,10 +75,10 @@ const workChartData = {
   ],
 };
 const codingChartData = {
-  labels: ["Python", "JavaScript", "PHP", "Java", "C#"],
+  labels: ['Python', 'JavaScript', 'PHP', 'Java', 'C#'],
   datasets: [
     {
-      label: "",
+      label: '',
       borderColor: [
         colors.themeColor1,
         colors.themeColor2,

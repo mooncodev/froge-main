@@ -1,17 +1,17 @@
 /* eslint-disable react/no-array-index-key, react/no-danger */
-import React, { useState, useEffect, useRef } from "react";
-import { Nav, NavItem, TabContent, TabPane } from "reactstrap";
-import { NavLink } from "react-router-dom";
-import classnames from "classnames";
-import { scroller } from "react-scroll";
-import Headroom from "react-headroom";
-import GlideComponent from "components/carousel/GlideComponent";
-import { buyUrl, appRoot } from "constants/defaultValues";
-import ParticleFroge from "../components/ParticleFroge";
-import slideItemsRoadmap from "../data/slideItemsRoadmap";
+import React, { useState, useEffect, useRef } from 'react';
+import { Nav, NavItem, TabContent, TabPane } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
+import classnames from 'classnames';
+import { scroller } from 'react-scroll';
+import Headroom from 'react-headroom';
+import GlideComponent from 'components/carousel/GlideComponent';
+import { buyUrl, appRoot } from 'constants/defaultValues';
+import ParticleFroge from '../components/ParticleFroge';
+import slideItemsRoadmap from '../data/slideItemsRoadmap';
 
 const slideSettings = {
-  type: "carousel",
+  type: 'carousel',
   gap: 30,
   perView: 4,
   hideNav: true,
@@ -25,108 +25,108 @@ const slideSettings = {
 
 const features = [
   {
-    title: "Pleasant Design",
-    img: "/assets/img/landing-page/features/plesant-design.png",
+    title: 'Pleasant Design',
+    img: '/assets/img/landing-page/features/plesant-design.png',
     detail:
-      "As a web developer we enjoy to work on something looks nice. It is not an absolute necessity but it really motivates us that final product will look good for user point of view. <br /><br />So we put a lot of work into colors, icons, composition and design harmony. Themed components and layouts with same design language. <br /><br />We kept user experience principles always at the heart of the design process.",
+      'As a web developer we enjoy to work on something looks nice. It is not an absolute necessity but it really motivates us that final product will look good for user point of view. <br /><br />So we put a lot of work into colors, icons, composition and design harmony. Themed components and layouts with same design language. <br /><br />We kept user experience principles always at the heart of the design process.',
   },
   {
-    title: "Extra Responsive",
-    img: "/assets/img/landing-page/features/extra-responsive.png",
+    title: 'Extra Responsive',
+    img: '/assets/img/landing-page/features/extra-responsive.png',
     detail:
-      "Xxs breakpoint is for smaller screens that has a resolution lower than 420px. Xs works between 576px and 420px. Xxl breakpoint is for larger screens that has a resolution higher than 1440px. Xl works between 1200px and 1440px.<br><br>With this approach we were able to create better experiences for smaller and larger screens.",
+      'Xxs breakpoint is for smaller screens that has a resolution lower than 420px. Xs works between 576px and 420px. Xxl breakpoint is for larger screens that has a resolution higher than 1440px. Xl works between 1200px and 1440px.<br><br>With this approach we were able to create better experiences for smaller and larger screens.',
   },
   {
-    title: "Superfine Charts",
-    img: "/assets/img/landing-page/features/superfine-charts.png",
+    title: 'Superfine Charts',
+    img: '/assets/img/landing-page/features/superfine-charts.png',
     detail:
-      "Using charts is a good way to visualize data but they often look ugly and break the rhythm of design. <br /><br />We concentrated on a single chart library and tried to create charts that look good with color, opacity, border and shadow. <br /><br />Used certain plugins and created some to make charts even more useful and beautiful.",
+      'Using charts is a good way to visualize data but they often look ugly and break the rhythm of design. <br /><br />We concentrated on a single chart library and tried to create charts that look good with color, opacity, border and shadow. <br /><br />Used certain plugins and created some to make charts even more useful and beautiful.',
   },
   {
-    title: "Layouts for the Job",
-    img: "/assets/img/landing-page/features/layouts-for-the-job.png",
+    title: 'Layouts for the Job',
+    img: '/assets/img/landing-page/features/layouts-for-the-job.png',
     detail:
-      "Layouts are the real thing, they need to be accurate and right for the job. They should be functional for both user and developer. <br /><br />We created lots of different layouts for different jobs.<br /><br />Listing pages with view mode changing capabilities, shift select and select all functionality, application layouts with an additional menu, authentication and error layouts which has a different design than the other pages were our main focus. We also created details page with tabs that can hold many components.",
+      'Layouts are the real thing, they need to be accurate and right for the job. They should be functional for both user and developer. <br /><br />We created lots of different layouts for different jobs.<br /><br />Listing pages with view mode changing capabilities, shift select and select all functionality, application layouts with an additional menu, authentication and error layouts which has a different design than the other pages were our main focus. We also created details page with tabs that can hold many components.',
   },
   {
-    title: "Smart Menu",
-    img: "/assets/img/landing-page/features/smart-menu.png",
+    title: 'Smart Menu',
+    img: '/assets/img/landing-page/features/smart-menu.png',
     detail:
-      "Instead of good old single panel menus with accordion structure that looks over complicated, we created 2 panels and categorized pages accordingly.<br><br>The default menu auto hides sub panel when resolution is under some breakpoint to open some space. You may also hide menu completely or use only main panel open only.",
+      'Instead of good old single panel menus with accordion structure that looks over complicated, we created 2 panels and categorized pages accordingly.<br><br>The default menu auto hides sub panel when resolution is under some breakpoint to open some space. You may also hide menu completely or use only main panel open only.',
   },
 ];
 
 const layouts = [
   {
-    title: "Menu Default",
-    img: "/assets/img/landing-page/layouts/menu-default.jpg",
+    title: 'Menu Default',
+    img: '/assets/img/landing-page/layouts/menu-default.jpg',
   },
   {
-    title: "Menu Subhidden",
-    img: "/assets/img/landing-page/layouts/menu-subhidden.jpg",
+    title: 'Menu Subhidden',
+    img: '/assets/img/landing-page/layouts/menu-subhidden.jpg',
   },
   {
-    title: "Menu Hidden",
-    img: "/assets/img/landing-page/layouts/menu-hidden.jpg",
+    title: 'Menu Hidden',
+    img: '/assets/img/landing-page/layouts/menu-hidden.jpg',
   },
   {
-    title: "Image List",
-    img: "/assets/img/landing-page/layouts/image-list.jpg",
+    title: 'Image List',
+    img: '/assets/img/landing-page/layouts/image-list.jpg',
   },
   {
-    title: "Thumb List",
-    img: "/assets/img/landing-page/layouts/thumb-list.jpg",
+    title: 'Thumb List',
+    img: '/assets/img/landing-page/layouts/thumb-list.jpg',
   },
-  { title: "Data List", img: "/assets/img/landing-page/layouts/data-list.jpg" },
-  { title: "Details", img: "/assets/img/landing-page/layouts/details.jpg" },
+  { title: 'Data List', img: '/assets/img/landing-page/layouts/data-list.jpg' },
+  { title: 'Details', img: '/assets/img/landing-page/layouts/details.jpg' },
   {
-    title: "Authentication",
-    img: "/assets/img/landing-page/layouts/authentication.jpg",
-  },
-  {
-    title: "Search Results",
-    img: "/assets/img/landing-page/layouts/search-result.jpg",
+    title: 'Authentication',
+    img: '/assets/img/landing-page/layouts/authentication.jpg',
   },
   {
-    title: "Single Page Application",
-    img: "/assets/img/landing-page/layouts/spa.jpg",
+    title: 'Search Results',
+    img: '/assets/img/landing-page/layouts/search-result.jpg',
   },
   {
-    title: "Data List App Menu Hidden",
-    img: "/assets/img/landing-page/layouts/data-list-app-menu-hidden.jpg",
+    title: 'Single Page Application',
+    img: '/assets/img/landing-page/layouts/spa.jpg',
   },
-  { title: "Tabs", img: "/assets/img/landing-page/layouts/tabs.jpg" },
+  {
+    title: 'Data List App Menu Hidden',
+    img: '/assets/img/landing-page/layouts/data-list-app-menu-hidden.jpg',
+  },
+  { title: 'Tabs', img: '/assets/img/landing-page/layouts/tabs.jpg' },
 ];
 
 const applications = [
   {
-    title: "Survey",
+    title: 'Survey',
     path: `${appRoot}/applications/survey`,
-    img: "/assets/img/landing-page/applications/survey.jpg",
+    img: '/assets/img/landing-page/applications/survey.jpg',
   },
   {
-    title: "Chat",
+    title: 'Chat',
     path: `${appRoot}/applications/chat`,
-    img: "/assets/img/landing-page/applications/chat.jpg",
+    img: '/assets/img/landing-page/applications/chat.jpg',
   },
   {
-    title: "Todo",
+    title: 'Todo',
     path: `${appRoot}/applications/todo`,
-    img: "/assets/img/landing-page/applications/todo.jpg",
+    img: '/assets/img/landing-page/applications/todo.jpg',
   },
 ];
 
 const themes = [
-  { title: "Navy Blue", class: "bluenavy" },
-  { title: "Olympic Blue", class: "blueolympic" },
-  { title: "Yale Blue", class: "blueyale" },
-  { title: "Moss Green", class: "greenmoss" },
-  { title: "Lime Green", class: "greenlime" },
-  { title: "Carrot Orange", class: "carrotorange" },
-  { title: "Ruby Red", class: "rubyred" },
-  { title: "Monster Purple", class: "monsterpurple" },
-  { title: "Steel Grey", class: "steelgrey" },
-  { title: "Granola Yellow", class: "granolayellow" },
+  { title: 'Navy Blue', class: 'bluenavy' },
+  { title: 'Olympic Blue', class: 'blueolympic' },
+  { title: 'Yale Blue', class: 'blueyale' },
+  { title: 'Moss Green', class: 'greenmoss' },
+  { title: 'Lime Green', class: 'greenlime' },
+  { title: 'Carrot Orange', class: 'carrotorange' },
+  { title: 'Ruby Red', class: 'rubyred' },
+  { title: 'Monster Purple', class: 'monsterpurple' },
+  { title: 'Steel Grey', class: 'steelgrey' },
+  { title: 'Granola Yellow', class: 'granolayellow' },
 ];
 
 const Home = () => {
@@ -152,16 +152,16 @@ const Home = () => {
   const onWindowScroll = () => setShowMobileMenu(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", onWindowScroll);
-    window.addEventListener("resize", onWindowResize);
-    window.addEventListener("click", onWindowClick);
+    window.addEventListener('scroll', onWindowScroll);
+    window.addEventListener('resize', onWindowResize);
+    window.addEventListener('click', onWindowClick);
 
-    document.body.classList.add("no-footer");
+    document.body.classList.add('no-footer');
     return () => {
-      window.removeEventListener("scroll", onWindowScroll);
-      window.removeEventListener("resize", onWindowResize);
-      window.removeEventListener("click", onWindowClick);
-      document.body.classList.remove("no-footer");
+      window.removeEventListener('scroll', onWindowScroll);
+      window.removeEventListener('resize', onWindowResize);
+      window.removeEventListener('click', onWindowClick);
+      document.body.classList.remove('no-footer');
     };
   }, []);
 
@@ -170,7 +170,7 @@ const Home = () => {
     scroller.scrollTo(target, {
       duration: 500,
       delay: 0,
-      smooth: "easeInOutQuart",
+      smooth: 'easeInOutQuart',
       offset: -100,
     });
     return false;
@@ -182,8 +182,8 @@ const Home = () => {
 
   return (
     <div
-      className={classnames("landing-page", {
-        "show-mobile-menu": showMobileMenu,
+      className={classnames('landing-page', {
+        'show-mobile-menu': showMobileMenu,
       })}
     >
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
@@ -191,7 +191,7 @@ const Home = () => {
         <a
           className="logo-mobile c-pointer"
           href="#scroll"
-          onClick={(event) => scrollTo(event, "home")}
+          onClick={(event) => scrollTo(event, 'home')}
         >
           <span />
         </a>
@@ -200,7 +200,7 @@ const Home = () => {
             <a
               className="c-pointer"
               href="#scroll"
-              onClick={(event) => scrollTo(event, "features")}
+              onClick={(event) => scrollTo(event, 'features')}
             >
               FEATURES
             </a>
@@ -209,7 +209,7 @@ const Home = () => {
             <a
               className="c-pointer"
               href="#scroll"
-              onClick={(event) => scrollTo(event, "layouts")}
+              onClick={(event) => scrollTo(event, 'layouts')}
             >
               LAYOUTS
             </a>
@@ -218,7 +218,7 @@ const Home = () => {
             <a
               className="c-pointer"
               href="#scroll"
-              onClick={(event) => scrollTo(event, "components")}
+              onClick={(event) => scrollTo(event, 'components')}
             >
               COMPONENTS
             </a>
@@ -227,7 +227,7 @@ const Home = () => {
             <a
               className="c-pointer"
               href="#scroll"
-              onClick={(event) => scrollTo(event, "apps")}
+              onClick={(event) => scrollTo(event, 'apps')}
             >
               APPS
             </a>
@@ -236,7 +236,7 @@ const Home = () => {
             <a
               className="c-pointer"
               href="#scroll"
-              onClick={(event) => scrollTo(event, "themes")}
+              onClick={(event) => scrollTo(event, 'themes')}
             >
               THEMES
             </a>
@@ -264,7 +264,7 @@ const Home = () => {
               <a
                 className="navbar-logo pull-left c-pointer"
                 href="#scroll"
-                onClick={(event) => scrollTo(event, "home")}
+                onClick={(event) => scrollTo(event, 'home')}
               >
                 <span className="white" />
                 <span className="dark" />
@@ -274,7 +274,7 @@ const Home = () => {
                   <a
                     className="c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "features")}
+                    onClick={(event) => scrollTo(event, 'features')}
                   >
                     FEATURES
                   </a>
@@ -283,7 +283,7 @@ const Home = () => {
                   <a
                     className="c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "layouts")}
+                    onClick={(event) => scrollTo(event, 'layouts')}
                   >
                     LAYOUTS
                   </a>
@@ -292,7 +292,7 @@ const Home = () => {
                   <a
                     className="c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "components")}
+                    onClick={(event) => scrollTo(event, 'components')}
                   >
                     COMPONENTS
                   </a>
@@ -301,7 +301,7 @@ const Home = () => {
                   <a
                     className="c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "apps")}
+                    onClick={(event) => scrollTo(event, 'apps')}
                   >
                     APPS
                   </a>
@@ -310,7 +310,7 @@ const Home = () => {
                   <a
                     className="c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "themes")}
+                    onClick={(event) => scrollTo(event, 'themes')}
                   >
                     THEMES
                   </a>
@@ -425,7 +425,7 @@ const Home = () => {
                 <a
                   className="btn btn-circle btn-outline-semi-light hero-circle-button"
                   href="#scroll"
-                  onClick={(event) => scrollTo(event, "features")}
+                  onClick={(event) => scrollTo(event, 'features')}
                 >
                   <i className="simple-icon-arrow-down" />
                 </a>
@@ -571,7 +571,7 @@ const Home = () => {
                         <a
                           href="#tab"
                           className={classnames({
-                            "nav-link": true,
+                            'nav-link': true,
                             active: activeTab === index,
                           })}
                           onClick={(event) => {
@@ -622,7 +622,7 @@ const Home = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
                     <div className="depth-2 color-container">
-                      {["left", "center", "right"].map((align, i) => (
+                      {['left', 'center', 'right'].map((align, i) => (
                         <div
                           key={`light_${index}_${i}`}
                           className={`${t.class}-light-${i + 1} color-${align}`}
@@ -632,7 +632,7 @@ const Home = () => {
                   </div>
                   <div className="col-12 col-md-6 col-lg-4 mb-3">
                     <div className="depth-2 color-container">
-                      {["left", "center", "right"].map((align, i) => (
+                      {['left', 'center', 'right'].map((align, i) => (
                         <div
                           key={`dark_${index}_${i}`}
                           className={`${t.class}-dark-${i + 1} color-${align}`}
@@ -677,7 +677,7 @@ const Home = () => {
                   <a
                     className="btn btn-circle btn-outline-semi-light footer-circle-button c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "home")}
+                    onClick={(event) => scrollTo(event, 'home')}
                   >
                     <i className="simple-icon-arrow-up" />
                   </a>
@@ -686,7 +686,7 @@ const Home = () => {
                   <a
                     className="c-pointer"
                     href="#scroll"
-                    onClick={(event) => scrollTo(event, "home")}
+                    onClick={(event) => scrollTo(event, 'home')}
                   >
                     <img
                       className="footer-logo"

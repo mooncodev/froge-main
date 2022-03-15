@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Row,
   Card,
@@ -6,11 +6,11 @@ import {
   CardTitle,
   FormGroup,
   Badge,
-} from "reactstrap";
-import { NavLink } from "react-router-dom";
+} from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
-import IntlMessages from "helpers/IntlMessages";
-import { Colxx } from "components/common/CustomBootstrap";
+import IntlMessages from 'helpers/IntlMessages';
+import { Colxx } from 'components/common/CustomBootstrap';
 
 const ImageCardList = () => {
   return (

@@ -1,19 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-param-reassign */
-import React, { useEffect, useRef, useState } from "react";
-import { Chart } from "chart.js";
+import React, { useEffect, useRef, useState } from 'react';
+import { Chart } from 'chart.js';
 
-import { smallLineChartOptions } from "./config";
+import { smallLineChartOptions } from './config';
 
 const addCommas = (nStr) => {
-  nStr += "";
-  const x = nStr.split(".");
+  nStr += '';
+  const x = nStr.split('.');
   let x1 = x[0];
-  const x2 = x.length > 1 ? `.${x[1]}` : "";
+  const x2 = x.length > 1 ? `.${x[1]}` : '';
   const rgx = /(\d+)(\d{3})/;
   while (rgx.test(x1)) {
-    x1 = x1.replace(rgx, "$1,$2");
+    x1 = x1.replace(rgx, '$1,$2');
   }
   return x1 + x2;
 };
@@ -21,8 +21,8 @@ const addCommas = (nStr) => {
 const Scatter = ({ data }) => {
   const chartContainer = useRef(null);
   const [, setChartInstance] = useState(null);
-  const [currentValue, setCurrentValue] = useState("");
-  const [currentLabel, setCurrentLabel] = useState("");
+  const [currentValue, setCurrentValue] = useState('');
+  const [currentLabel, setCurrentLabel] = useState('');
 
   const changeState = (yLabel, xLabel) => {
     setCurrentValue(yLabel);
@@ -42,22 +42,22 @@ const Scatter = ({ data }) => {
           if (tooltip._active && tooltip._active[0]) {
             const activePoint = tooltip._active[0];
             const { x } = activePoint.tooltipPosition();
-            const topY = scales["y-axis-0"].top;
-            const bottomY = scales["y-axis-0"].bottom;
+            const topY = scales['y-axis-0'].top;
+            const bottomY = scales['y-axis-0'].bottom;
             ctx.save();
             ctx.beginPath();
             ctx.moveTo(x, topY);
             ctx.lineTo(x, bottomY);
             ctx.lineWidth = 1;
-            ctx.strokeStyle = "rgba(0,0,0,0.1)";
+            ctx.strokeStyle = 'rgba(0,0,0,0.1)';
             ctx.stroke();
             ctx.restore();
           }
         },
       });
-      const context = chartContainer.current.getContext("2d");
+      const context = chartContainer.current.getContext('2d');
       const newChartInstance = new Chart(context, {
-        type: "lineWithLine",
+        type: 'lineWithLine',
         options: {
           ...smallLineChartOptions,
           tooltips: {
@@ -67,7 +67,7 @@ const Scatter = ({ data }) => {
               if (tooltipModel && tooltipModel.dataPoints) {
                 const { yLabel } = tooltipModel.dataPoints[0];
                 const { xLabel } = tooltipModel.dataPoints[0];
-                const label = tooltipModel.body[0].lines[0].split(":")[0];
+                const label = tooltipModel.body[0].lines[0].split(':')[0];
                 changeState(`$${addCommas(yLabel)}`, `${label}-${xLabel}`);
               }
             },

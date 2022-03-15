@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import {
   CustomInput,
   Button,
@@ -9,19 +9,19 @@ import {
   ModalFooter,
   Input,
   Label,
-} from "reactstrap";
-import Select from "react-select";
-import CustomSelectInput from "components/common/CustomSelectInput";
-import IntlMessages from "helpers/IntlMessages";
+} from 'reactstrap';
+import Select from 'react-select';
+import CustomSelectInput from 'components/common/CustomSelectInput';
+import IntlMessages from 'helpers/IntlMessages';
 
-import { addTodoItem } from "redux/actions";
+import { addTodoItem } from 'redux/actions';
 
 const initialState = {
-  title: "",
-  detail: "",
+  title: '',
+  detail: '',
   label: {},
   category: {},
-  status: "PENDING",
+  status: 'PENDING',
 };
 
 const AddNewTodoModal = ({
@@ -121,11 +121,11 @@ const AddNewTodoModal = ({
           id="exCustomRadio"
           name="customRadio"
           label="COMPLETED"
-          checked={state.status === "COMPLETED"}
+          checked={state.status === 'COMPLETED'}
           onChange={(event) =>
             setState({
               ...state,
-              status: event.target.value === "on" ? "COMPLETED" : "PENDING",
+              status: event.target.value === 'on' ? 'COMPLETED' : 'PENDING',
             })
           }
         />
@@ -134,11 +134,11 @@ const AddNewTodoModal = ({
           id="exCustomRadio2"
           name="customRadio2"
           label="PENDING"
-          defaultChecked={state.status === "PENDING"}
+          defaultChecked={state.status === 'PENDING'}
           onChange={(event) =>
             setState({
               ...state,
-              status: event.target.value !== "on" ? "COMPLETED" : "PENDING",
+              status: event.target.value !== 'on' ? 'COMPLETED' : 'PENDING',
             })
           }
         />
@@ -149,7 +149,7 @@ const AddNewTodoModal = ({
         </Button>
         <Button color="primary" onClick={() => addNetItem()}>
           <IntlMessages id="todo.submit" />
-        </Button>{" "}
+        </Button>{' '}
       </ModalFooter>
     </Modal>
   );

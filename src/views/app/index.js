@@ -1,17 +1,17 @@
-import React, { Suspense } from "react";
-import { Route, withRouter, Switch, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
+import React, { Suspense } from 'react';
+import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import AppLayout from "layout/AppLayout";
+import AppLayout from 'layout/AppLayout';
 
 const FrogeX = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-frogeX" */ "./frogex")
+  import(/* webpackChunkName: "viwes-frogeX" */ './frogex')
 );
 const SecondMenu = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-second-menu" */ "./second-menu")
+  import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
 );
 const BlankPage = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-blank-page" */ "./blank-page")
+  import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
 );
 
 const App = ({ match }) => {

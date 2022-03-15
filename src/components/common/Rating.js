@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Rater from "react-rater";
-import "react-rater/lib/react-rater.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Rater from 'react-rater';
+import 'react-rater/lib/react-rater.css';
 
 const Rating = (props) => (
   <Rater {...props}>
@@ -12,17 +12,17 @@ const Rating = (props) => (
 const Star = (props) => {
   const starProps = { ...props };
   const nameMap = {
-    isDisabled: "is-disabled",
-    isActive: "is-active",
-    isActiveHalf: "is-active-half",
-    willBeActive: "will-be-active",
+    isDisabled: 'is-disabled',
+    isActive: 'is-active',
+    isActiveHalf: 'is-active-half',
+    willBeActive: 'will-be-active',
   };
 
   const className = Object.keys(nameMap)
     // eslint-disable-next-line
     .filter((prop) => (delete starProps[prop], props[prop]))
     .map((prop) => nameMap[prop])
-    .join(" ");
+    .join(' ');
   return <div className={`react-rater-star ${className}`} {...starProps} />;
 };
 

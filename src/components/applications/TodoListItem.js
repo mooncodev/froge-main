@@ -1,8 +1,8 @@
-import React from "react";
-import { Card, CardBody, Badge, CustomInput } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { Card, CardBody, Badge, CustomInput } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
-import { Colxx } from "../common/CustomBootstrap";
+import { Colxx } from '../common/CustomBootstrap';
 
 const TodoListItem = ({ item, handleCheckChange, isSelected }) => {
   return (
@@ -18,9 +18,9 @@ const TodoListItem = ({ item, handleCheckChange, isSelected }) => {
             >
               <i
                 className={`${
-                  item.status === "COMPLETED"
-                    ? "simple-icon-check heading-icon"
-                    : "simple-icon-refresh heading-icon"
+                  item.status === 'COMPLETED'
+                    ? 'simple-icon-check heading-icon'
+                    : 'simple-icon-refresh heading-icon'
                 }`}
               />
               <span className="align-middle d-inline-block">{item.title}</span>

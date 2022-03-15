@@ -1,9 +1,9 @@
-import enMessages from "../locales/en_US";
+import enMessages from '../locales/en_US';
 
 const EnLang = {
   messages: {
     ...enMessages,
   },
-  locale: "en-US",
+  locale: 'en-US',
 };
 export default EnLang;

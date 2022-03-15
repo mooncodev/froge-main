@@ -1,20 +1,20 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
-import { Row } from "reactstrap";
-import Select from "react-select";
-import IntlMessages from "helpers/IntlMessages";
-import CustomSelectInput from "components/common/CustomSelectInput";
-import { Colxx } from "components/common/CustomBootstrap";
+import React, { useState } from 'react';
+import { Row } from 'reactstrap';
+import Select from 'react-select';
+import IntlMessages from 'helpers/IntlMessages';
+import CustomSelectInput from 'components/common/CustomSelectInput';
+import { Colxx } from 'components/common/CustomBootstrap';
 
 const selectData = [
-  { label: "Cake", value: "cake", key: 0 },
-  { label: "Cupcake", value: "cupcake", key: 1 },
-  { label: "Dessert", value: "dessert", key: 2 },
+  { label: 'Cake', value: 'cake', key: 0 },
+  { label: 'Cupcake', value: 'cupcake', key: 1 },
+  { label: 'Dessert', value: 'dessert', key: 2 },
 ];
 
 const ReactSelectExample = () => {
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   return (

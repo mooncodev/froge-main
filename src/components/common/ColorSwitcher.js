@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useRef, useEffect } from "react";
-import { FormGroup, Label, CustomInput } from "reactstrap";
+import React, { useState, useRef, useEffect } from 'react';
+import { FormGroup, Label, CustomInput } from 'reactstrap';
 import {
   getCurrentColor,
   setCurrentColor,
   getCurrentRadius,
   setCurrentRadius,
-} from "helpers/Utils";
-import { colors } from "constants/defaultValues";
+} from 'helpers/Utils';
+import { colors } from 'constants/defaultValues';
 
 const ColorSwitcher = () => {
   const containerRef = useRef();
@@ -16,10 +16,10 @@ const ColorSwitcher = () => {
   const [radius, setRadius] = useState(getCurrentRadius());
 
   useEffect(() => {
-    if (radius === "flat") {
-      document.body.classList.remove("rounded");
+    if (radius === 'flat') {
+      document.body.classList.remove('rounded');
     } else {
-      document.body.classList.add("rounded");
+      document.body.classList.add('rounded');
     }
     setCurrentRadius(radius);
     if (isOpen) setIsOpen(false);
@@ -36,12 +36,12 @@ const ColorSwitcher = () => {
   };
 
   useEffect(() => {
-    ["click", "touchstart"].forEach((event) =>
+    ['click', 'touchstart'].forEach((event) =>
       document.addEventListener(event, handleDocumentClick, false)
     );
 
     return () => {
-      ["click", "touchstart"].forEach((event) =>
+      ['click', 'touchstart'].forEach((event) =>
         document.removeEventListener(event, handleDocumentClick, false)
       );
     };
@@ -57,7 +57,7 @@ const ColorSwitcher = () => {
   };
 
   return (
-    <div ref={containerRef} className={`theme-colors ${isOpen ? "shown" : ""}`}>
+    <div ref={containerRef} className={`theme-colors ${isOpen ? 'shown' : ''}`}>
       <div className="p-4">
         <p className="text-muted mb-2">Light Theme</p>
         <div className="d-flex flex-row justify-content-between mb-3">
@@ -66,11 +66,11 @@ const ColorSwitcher = () => {
               key={`light.${color}`}
               href={`#light.${color}`}
               className={`theme-color theme-color-${color} ${
-                selectedColor === `light.${color}` ? "active" : ""
+                selectedColor === `light.${color}` ? 'active' : ''
               }`}
               onClick={(e) => changeThemeColor(e, `light.${color}`)}
             >
-              <span>{` `}</span>
+              <span> </span>
             </a>
           ))}
         </div>
@@ -80,11 +80,11 @@ const ColorSwitcher = () => {
               key={`light.${color}`}
               href={`#light.${color}`}
               className={`theme-color theme-color-${color} ${
-                selectedColor === `light.${color}` ? "active" : ""
+                selectedColor === `light.${color}` ? 'active' : ''
               }`}
               onClick={(e) => changeThemeColor(e, `light.${color}`)}
             >
-              <span>{` `}</span>
+              <span> </span>
             </a>
           ))}
         </div>
@@ -95,11 +95,11 @@ const ColorSwitcher = () => {
               key={`dark.${color}`}
               href={`#dark.${color}`}
               className={`theme-color theme-color-${color} ${
-                selectedColor === `dark.${color}` ? "active" : ""
+                selectedColor === `dark.${color}` ? 'active' : ''
               }`}
               onClick={(e) => changeThemeColor(e, `dark.${color}`)}
             >
-              <span>{` `}</span>
+              <span> </span>
             </a>
           ))}
         </div>
@@ -109,11 +109,11 @@ const ColorSwitcher = () => {
               key={`dark.${color}`}
               href={`#dark.${color}`}
               className={`theme-color theme-color-${color} ${
-                selectedColor === `dark.${color}` ? "active" : ""
+                selectedColor === `dark.${color}` ? 'active' : ''
               }`}
               onClick={(e) => changeThemeColor(e, `dark.${color}`)}
             >
-              <span>{` `}</span>
+              <span> </span>
             </a>
           ))}
         </div>
@@ -128,8 +128,8 @@ const ColorSwitcher = () => {
               id="rounded"
               label="Rounded"
               inline
-              defaultChecked={radius === "rounded"}
-              onChange={() => setRadius("rounded")}
+              defaultChecked={radius === 'rounded'}
+              onChange={() => setRadius('rounded')}
             />
             <CustomInput
               type="radio"
@@ -137,8 +137,8 @@ const ColorSwitcher = () => {
               id="flat"
               label="Flat"
               inline
-              defaultChecked={radius === "flat"}
-              onChange={() => setRadius("flat")}
+              defaultChecked={radius === 'flat'}
+              onChange={() => setRadius('flat')}
             />
           </div>
         </FormGroup>
@@ -152,8 +152,8 @@ const ColorSwitcher = () => {
           setIsOpen(!isOpen);
         }}
       >
-        {" "}
-        <i className="simple-icon-magic-wand" />{" "}
+        {' '}
+        <i className="simple-icon-magic-wand" />{' '}
       </a>
     </div>
   );

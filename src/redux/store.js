@@ -1,7 +1,8 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import createSagaMiddleware from "redux-saga";
-import reducers from "./reducers";
-import sagas from "./sagas";
+import { createStore, applyMiddleware, compose } from 'redux';
+import { save, load } from 'redux-localstorage-simple';
+import createSagaMiddleware from 'redux-saga';
+import reducers from './reducers';
+import sagas from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -18,9 +19,9 @@ export function configureStore(initialState) {
   sagaMiddleware.run(sagas);
 
   if (module.hot) {
-    module.hot.accept("./reducers", () => {
+    module.hot.accept('./reducers', () => {
       // eslint-disable-next-line global-require
-      const nextRootReducer = require("./reducers");
+      const nextRootReducer = require('./reducers');
       store.replaceReducer(nextRootReducer);
     });
   }

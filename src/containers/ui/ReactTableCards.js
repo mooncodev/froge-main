@@ -3,15 +3,15 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/display-name */
-import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
-import { useTable, usePagination, useSortBy } from "react-table";
-import classnames from "classnames";
+import React from 'react';
+import { Card, CardBody, CardTitle } from 'reactstrap';
+import { useTable, usePagination, useSortBy } from 'react-table';
+import classnames from 'classnames';
 
-import IntlMessages from "helpers/IntlMessages";
-import DatatablePagination from "components/DatatablePagination";
+import IntlMessages from 'helpers/IntlMessages';
+import DatatablePagination from 'components/DatatablePagination';
 
-import products from "../../data/products";
+import products from '../../data/products';
 
 function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
   const {
@@ -40,7 +40,7 @@ function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
     <>
       <table
         {...getTableProps()}
-        className={`r-table table ${classnames({ "table-divided": divided })}`}
+        className={`r-table table ${classnames({ 'table-divided': divided })}`}
       >
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -52,12 +52,12 @@ function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
                   className={
                     column.isSorted
                       ? column.isSortedDesc
-                        ? "sorted-desc"
-                        : "sorted-asc"
-                      : ""
+                        ? 'sorted-desc'
+                        : 'sorted-asc'
+                      : ''
                   }
                 >
-                  {column.render("Header")}
+                  {column.render('Header')}
                   <span />
                 </th>
               ))}
@@ -77,7 +77,7 @@ function Table({ columns, data, divided = false, defaultPageSize = 6 }) {
                       className: cell.column.cellClass,
                     })}
                   >
-                    {cell.render("Cell")}
+                    {cell.render('Cell')}
                   </td>
                 ))}
               </tr>
@@ -107,27 +107,27 @@ export const ReactTableWithPaginationCard = () => {
   const cols = React.useMemo(
     () => [
       {
-        Header: "Name",
-        accessor: "title",
-        cellClass: "list-item-heading w-40",
+        Header: 'Name',
+        accessor: 'title',
+        cellClass: 'list-item-heading w-40',
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: "Sales",
-        accessor: "sales",
-        cellClass: "text-muted w-10",
+        Header: 'Sales',
+        accessor: 'sales',
+        cellClass: 'text-muted w-10',
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: "Stock",
-        accessor: "stock",
-        cellClass: "text-muted w-10",
+        Header: 'Stock',
+        accessor: 'stock',
+        cellClass: 'text-muted w-10',
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: "Category",
-        accessor: "category",
-        cellClass: "text-muted w-40",
+        Header: 'Category',
+        accessor: 'category',
+        cellClass: 'text-muted w-40',
         Cell: (props) => <>{props.value}</>,
       },
     ],
@@ -150,27 +150,27 @@ export const ReactTableDivided = () => {
   const cols = React.useMemo(
     () => [
       {
-        Header: "Name",
-        accessor: "title",
-        cellClass: "list-item-heading w-40",
+        Header: 'Name',
+        accessor: 'title',
+        cellClass: 'list-item-heading w-40',
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: "Sales",
-        accessor: "sales",
-        cellClass: "text-muted  w-10",
+        Header: 'Sales',
+        accessor: 'sales',
+        cellClass: 'text-muted  w-10',
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: "Stock",
-        accessor: "stock",
-        cellClass: "text-muted  w-10",
+        Header: 'Stock',
+        accessor: 'stock',
+        cellClass: 'text-muted  w-10',
         Cell: (props) => <>{props.value}</>,
       },
       {
-        Header: "Category",
-        accessor: "category",
-        cellClass: "text-muted  w-40",
+        Header: 'Category',
+        accessor: 'category',
+        cellClass: 'text-muted  w-40',
         Cell: (props) => <>{props.value}</>,
       },
     ],

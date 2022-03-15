@@ -1,10 +1,10 @@
 /* eslint-disable prefer-rest-params */
-import React from "react";
-import ParticleImage, { forces, Vector } from "react-particle-image";
-import { useWindowSize } from "rooks";
+import React from 'react';
+import ParticleImage, { forces, Vector } from 'react-particle-image';
+import { useWindowSize } from 'rooks';
 
 const ParticleFroge = ({ data, shadow = false }) => {
-  const motionForce = (x, y) => forces.entropy(.9);
+  const motionForce = (x, y) => forces.entropy(0.9);
   const actionForce = (x, y) => forces.disturbance(x, y, 35);
   const { innerWidth, innerHeight } = useWindowSize();
 
@@ -24,7 +24,7 @@ const ParticleFroge = ({ data, shadow = false }) => {
           // Make a particle for this pixel if blue > 50 (range 0-255)
           return pixel.b > 50;
         },
-        color: ({ x, y, image }) => "#2f5d25",
+        color: ({ x, y, image }) => '#2f5d25',
         radius: () => Math.random() * 1.5 + 0.5,
         mass: () => 40,
         friction: () => 0.2,

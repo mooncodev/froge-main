@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Card, CardBody, CardSubtitle, CardText } from "reactstrap";
-import ThumbnailImage from "./ThumbnailImage";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Card, CardBody, CardSubtitle, CardText } from 'reactstrap';
+import ThumbnailImage from './ThumbnailImage';
 
-const UserCardBasic = ({ link = "#", data }) => {
+const UserCardBasic = ({ link = '#', data }) => {
   return (
     <Card className="d-flex flex-row mb-4">
       <NavLink to={link} className="d-flex">

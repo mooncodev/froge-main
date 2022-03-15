@@ -10,6 +10,7 @@
     "eject": "react-scripts ejct",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:fix2": "eslint --fix src",
     "precommit": "lint-staged"
   },
   "devDependencies": {
@@ -18,7 +19,6 @@
     "@testing-library/user-event": "^13.1.9",
     "babel-eslint": "^10.1.0",
     "babel-plugin-macros": "^3.1.0",
-
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -31,16 +31,15 @@
     "prettier": "^2.3.1"
   },
   "dependencies": {
-    "@uniswap/v2-core": "1.0.0",
-    "@uniswap/v2-periphery": "^1.1.0-beta.0",
-    "@uniswap/v3-core": "1.0.0",
-    "@uniswap/v3-periphery": "^1.1.1",
 
     "ethers": "^5.6.0",
     "web3": "^1.7.1",
     "web3modal": "^1.9.5",
     "web3-react": "^5.0.5",
 
+    "@bootstrap-styled/v4": "^3.4.0",
+    "react-bootstrap-icons": "^1.7.2",
+    "reactstrap": "^8.9.0",
 
     "@glidejs/glide": "^3.4.1",
     "@popperjs/core": "^2.4.4",
@@ -53,7 +52,6 @@
     "formik": "^2.2.9",
     "moment": "2.29.1",
     "mousetrap": "^1.6.5",
-    "node-sass": "^6.0.0",
     "prop-types": "^15.7.2",
     "qs": "^6.10.3",
 
@@ -64,7 +62,6 @@
     "react-albus": "^2.0.0",
     "react-autosuggest": "^10.1.0",
     "react-big-calendar": "^0.33.5",
-    "react-bootstrap-icons": "^1.7.2",
     "react-circular-progressbar": "^2.0.4",
     "react-contextmenu": "^2.14.0",
     "react-datepicker": "^4.1.1",
@@ -92,7 +89,6 @@
     "react-transition-group": "^4.4.2",
     "react-virtualized":"^9.22.3",
     "react-window": "^1.8.6",
-    "reactstrap": "^8.9.0",
 
     "redux": "^4.1.0",
     "redux-localstorage-simple": "^2.4.1",

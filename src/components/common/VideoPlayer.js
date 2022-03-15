@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/media-has-caption */
-import React, { useRef, useEffect } from "react";
-import videojs from "video.js";
+import React, { useRef, useEffect } from 'react';
+import videojs from 'video.js';
 
 const VideoPlayer = (props) => {
   const playerRef = useRef();
@@ -25,7 +25,7 @@ const VideoPlayer = (props) => {
         <video
           ref={playerRef}
           poster="/assets/img/video/poster.jpg"
-          className={className || ""}
+          className={className || ''}
         />
       </div>
     </div>

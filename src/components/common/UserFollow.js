@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import IntlMessages from "helpers/IntlMessages";
-import SingleLightbox from "../pages/SingleLightbox";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import IntlMessages from 'helpers/IntlMessages';
+import SingleLightbox from '../pages/SingleLightbox';
 
 const UserFollow = ({ data }) => {
   return (

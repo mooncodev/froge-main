@@ -1,14 +1,14 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
+import React from 'react';
 import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   NavLink,
-} from "reactstrap";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import { appRoot } from "constants/defaultValues";
-import notifications from "../../data/notifications";
+} from 'reactstrap';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { appRoot } from 'constants/defaultValues';
+import notifications from '../../data/notifications';
 
 const NotificationItem = ({ img, title, date }) => {
   return (

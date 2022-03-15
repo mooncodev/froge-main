@@ -1,13 +1,13 @@
-import React from "react";
-import { Card, CardBody } from "reactstrap";
-import { CircularProgressbar } from "react-circular-progressbar";
+import React from 'react';
+import { Card, CardBody } from 'reactstrap';
+import { CircularProgressbar } from 'react-circular-progressbar';
 
 const GradientWithRadialProgressCard = ({
-  icon = "iconsminds-bell",
-  title = "title",
-  detail = "detail",
+  icon = 'iconsminds-bell',
+  title = 'title',
+  detail = 'detail',
   percent = 80,
-  progressText = "8/10",
+  progressText = '8/10',
 }) => {
   return (
     <Card className="progress-banner">

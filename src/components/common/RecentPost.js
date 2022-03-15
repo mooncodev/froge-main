@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { injectIntl } from "react-intl";
-import { Badge } from "reactstrap";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { injectIntl } from 'react-intl';
+import { Badge } from 'reactstrap';
 
 const RecentPost = ({ data }) => {
   return (
@@ -12,7 +12,7 @@ const RecentPost = ({ data }) => {
           alt="thumbnail"
           className="list-thumbnail border-0"
         />
-        {data.badge !== "" && (
+        {data.badge !== '' && (
           <Badge
             color="primary"
             pill

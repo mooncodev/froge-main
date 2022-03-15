@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
-import { Card, CardBody, CardTitle, Row } from "reactstrap";
-import Switch from "rc-switch";
-import "rc-switch/assets/index.css";
+import React, { useState } from 'react';
+import { Card, CardBody, CardTitle, Row } from 'reactstrap';
+import Switch from 'rc-switch';
+import 'rc-switch/assets/index.css';
 
-import IntlMessages from "helpers/IntlMessages";
-import { Colxx } from "components/common/CustomBootstrap";
+import IntlMessages from 'helpers/IntlMessages';
+import { Colxx } from 'components/common/CustomBootstrap';
 
 const SwitchExamples = () => {
   const [checkedPrimary, setCheckedPrimary] = useState(false);

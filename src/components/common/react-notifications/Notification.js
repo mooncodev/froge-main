@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 const Notification = ({
   title,
@@ -40,7 +40,7 @@ const Notification = ({
   };
 
   const className = classnames([
-    "notification",
+    'notification',
     `notification-${type}`,
     customClassName,
   ]);
@@ -57,12 +57,12 @@ const Notification = ({
 
 Notification.propTypes = {
   type: PropTypes.oneOf([
-    "info",
-    "success",
-    "warning",
-    "error",
-    "primary",
-    "secondary",
+    'info',
+    'success',
+    'warning',
+    'error',
+    'primary',
+    'secondary',
   ]),
   title: PropTypes.node,
   message: PropTypes.node,
@@ -73,13 +73,13 @@ Notification.propTypes = {
 };
 
 Notification.defaultProps = {
-  type: "info",
+  type: 'info',
   title: null,
   message: null,
   timeOut: 5000,
   onClick: () => {},
   onRequestHide: () => {},
-  customClassName: "",
+  customClassName: '',
 };
 
 export default Notification;

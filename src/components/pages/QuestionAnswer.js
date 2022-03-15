@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, UncontrolledCollapse } from "reactstrap";
+import React from 'react';
+import { Button, UncontrolledCollapse } from 'reactstrap';
 
 const QuestionAnswer = ({ data }) => {
   return (

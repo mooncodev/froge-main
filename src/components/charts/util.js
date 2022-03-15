@@ -1,4 +1,4 @@
-import { ThemeColors } from "helpers/ThemeColors";
+import { ThemeColors } from 'helpers/ThemeColors';
 
 export const chartTooltip = {
   backgroundColor: ThemeColors().foregroundColor,
@@ -47,17 +47,17 @@ export const centerTextPlugin = {
         : activePercentage;
     }
 
-    ctx.font = "36px Nunito, sans-serif";
+    ctx.font = '36px Nunito, sans-serif';
     ctx.fillStyle = ThemeColors().primaryColor;
-    ctx.textBaseline = "middle";
+    ctx.textBaseline = 'middle';
 
     const text = `${activePercentage}%`;
     const textX = Math.round((width - ctx.measureText(text).width) / 2);
     const textY = height / 2;
     ctx.fillText(text, textX, textY);
 
-    ctx.font = "14px Nunito, sans-serif";
-    ctx.textBaseline = "middle";
+    ctx.font = '14px Nunito, sans-serif';
+    ctx.textBaseline = 'middle';
 
     const text2 = activeLabel;
     const textX2 = Math.round((width - ctx.measureText(text2).width) / 2);

@@ -3,17 +3,17 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable max-classes-per-file */
-import React from "react";
-import Select from "react-select";
-import { CustomInput } from "reactstrap";
+import React from 'react';
+import Select from 'react-select';
+import { CustomInput } from 'reactstrap';
 
-import TagsInput from "react-tagsinput";
-import "react-tagsinput/react-tagsinput.css";
-import Switch from "rc-switch";
-import "rc-switch/assets/index.css";
+import TagsInput from 'react-tagsinput';
+import 'react-tagsinput/react-tagsinput.css';
+import Switch from 'rc-switch';
+import 'rc-switch/assets/index.css';
 
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const FormikReactSelect = ({
   name,
@@ -74,7 +74,7 @@ const FormikCheckboxGroup = ({
           <div
             key={`${name}_${child.value}_${index}`}
             className={`position-relative form-check ${
-              inline ? "form-check-inline" : ""
+              inline ? 'form-check-inline' : ''
             }`}
           >
             <input
@@ -213,7 +213,7 @@ const FormikRadioButtonGroup = ({
           <div
             key={`${name}_${child.value}_${index}`}
             className={`position-relative form-check ${
-              inline ? "form-check-inline" : ""
+              inline ? 'form-check-inline' : ''
             }`}
           >
             <input

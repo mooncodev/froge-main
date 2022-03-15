@@ -1,9 +1,9 @@
 // eslint-disable react/forbid-prop-types
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import Glide from "@glidejs/glide";
-import { getDirection } from "helpers/Utils";
-import "@glidejs/glide/dist/css/glide.core.min.css";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Glide from '@glidejs/glide';
+import { getDirection } from 'helpers/Utils';
+import '@glidejs/glide/dist/css/glide.core.min.css';
 
 let resizeTimeOut = -1;
 let mountTimeOut = -1;
@@ -26,10 +26,10 @@ function GlideComponent(props) {
       direction: getDirection().direction,
     });
     glideCarousel.mount();
-    glideCarousel.on("resize", onResize);
+    glideCarousel.on('resize', onResize);
     mountTimeOut = setTimeout(() => {
-      const event = document.createEvent("HTMLEvents");
-      event.initEvent("resize", false, false);
+      const event = document.createEvent('HTMLEvents');
+      event.initEvent('resize', false, false);
       window.dispatchEvent(event);
     }, 500);
   };

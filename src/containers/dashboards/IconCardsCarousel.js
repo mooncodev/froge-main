@@ -1,17 +1,17 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import IconCard from "components/cards/IconCard";
-import GlideComponent from "components/carousel/GlideComponent";
-import data from "../../data/iconCards";
+import React from 'react';
+import IconCard from 'components/cards/IconCard';
+import GlideComponent from 'components/carousel/GlideComponent';
+import data from '../../data/iconCards';
 
-const IconCardsCarousel = ({ className = "icon-cards-row" }) => {
+const IconCardsCarousel = ({ className = 'icon-cards-row' }) => {
   return (
     <div className={className}>
       <GlideComponent
         settings={{
           gap: 5,
           perView: 4,
-          type: "carousel",
+          type: 'carousel',
           breakpoints: {
             320: { perView: 1 },
             576: { perView: 2 },

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import {
   CustomInput,
   Button,
@@ -9,18 +9,18 @@ import {
   ModalFooter,
   Input,
   Label,
-} from "reactstrap";
-import Select from "react-select";
-import CustomSelectInput from "components/common/CustomSelectInput";
-import IntlMessages from "helpers/IntlMessages";
+} from 'reactstrap';
+import Select from 'react-select';
+import CustomSelectInput from 'components/common/CustomSelectInput';
+import IntlMessages from 'helpers/IntlMessages';
 
-import { addSurveyItem } from "redux/actions";
+import { addSurveyItem } from 'redux/actions';
 
 const initialState = {
-  title: "",
+  title: '',
   label: {},
   category: {},
-  status: "ACTIVE",
+  status: 'ACTIVE',
 };
 
 const AddNewSurveyModal = ({
@@ -109,11 +109,11 @@ const AddNewSurveyModal = ({
           id="exCustomRadio"
           name="customRadio"
           label="COMPLETED"
-          checked={state.status === "COMPLETED"}
+          checked={state.status === 'COMPLETED'}
           onChange={(event) =>
             setState({
               ...state,
-              status: event.target.value === "on" ? "COMPLETED" : "ACTIVE",
+              status: event.target.value === 'on' ? 'COMPLETED' : 'ACTIVE',
             })
           }
         />
@@ -122,11 +122,11 @@ const AddNewSurveyModal = ({
           id="exCustomRadio2"
           name="customRadio2"
           label="ACTIVE"
-          checked={state.status === "ACTIVE"}
+          checked={state.status === 'ACTIVE'}
           onChange={(event) =>
             setState({
               ...state,
-              status: event.target.value !== "on" ? "COMPLETED" : "ACTIVE",
+              status: event.target.value !== 'on' ? 'COMPLETED' : 'ACTIVE',
             })
           }
         />

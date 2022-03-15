@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Card,
   Button,
@@ -10,16 +10,16 @@ import {
   Input,
   Badge,
   CustomInput,
-} from "reactstrap";
-import Select from "react-select";
-import { ReactSortable } from "react-sortablejs";
+} from 'reactstrap';
+import Select from 'react-select';
+import { ReactSortable } from 'react-sortablejs';
 
-import CustomSelectInput from "components/common/CustomSelectInput";
+import CustomSelectInput from 'components/common/CustomSelectInput';
 
 const answerTypes = [
-  { label: "Text Area", value: "1", id: 1 },
-  { label: "Checkbox", value: "2", id: 2 },
-  { label: "Radiobutton", value: "3", id: 3 },
+  { label: 'Text Area', value: '1', id: 1 },
+  { label: 'Checkbox', value: '2', id: 2 },
+  { label: 'Radiobutton', value: '3', id: 3 },
 ];
 
 const SurveyQuestionBuilder = ({
@@ -33,10 +33,10 @@ const SurveyQuestionBuilder = ({
   deleteClick,
 }) => {
   const [collapse, setCollapse] = useState(expanded || false);
-  const [mode, setMode] = useState("edit-quesiton");
+  const [mode, setMode] = useState('edit-quesiton');
   const [qId] = useState(id);
   const [qTitle, setQTitle] = useState(title);
-  const [qQuestion, setQQuestion] = useState(question || "");
+  const [qQuestion, setQQuestion] = useState(question || '');
   const [qAnswerType, setQAnswerType] = useState(
     answerType
       ? answerTypes.find((item) => {
@@ -47,12 +47,12 @@ const SurveyQuestionBuilder = ({
   const [qAnswers, setQAnswers] = useState(answers || []);
 
   const editClick = () => {
-    setMode("edit-quesiton");
+    setMode('edit-quesiton');
     setCollapse(true);
   };
 
   const viewClick = () => {
-    setMode("view-quesiton");
+    setMode('view-quesiton');
     setCollapse(true);
   };
 
@@ -77,7 +77,7 @@ const SurveyQuestionBuilder = ({
       });
       nextId = orderedAnswers[0].id + 1;
     }
-    setQAnswers([...qAnswers, { id: nextId, label: "" }]);
+    setQAnswers([...qAnswers, { id: nextId, label: '' }]);
   };
 
   const updateAnswer = (answerId, event) => {
@@ -165,7 +165,7 @@ const SurveyQuestionBuilder = ({
             outline
             color="theme-3"
             className={`icon-button ml-1 rotate-icon-click ${
-              collapse ? "rotate" : ""
+              collapse ? 'rotate' : ''
             }`}
             onClick={() => setCollapse(!collapse)}
           >
@@ -225,7 +225,7 @@ const SurveyQuestionBuilder = ({
                 setList={(newState) => setQAnswers(newState)}
                 className="answers"
                 options={{
-                  handle: ".handle",
+                  handle: '.handle',
                 }}
               >
                 {qAnswers.map((item) => {

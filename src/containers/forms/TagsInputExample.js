@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { injectIntl } from "react-intl";
-import TagsInput from "react-tagsinput";
-import "react-tagsinput/react-tagsinput.css";
+import React, { useState } from 'react';
+import { injectIntl } from 'react-intl';
+import TagsInput from 'react-tagsinput';
+import 'react-tagsinput/react-tagsinput.css';
 
 const TagsInputExample = ({ intl }) => {
   const [tags, setTags] = useState([]);
@@ -11,7 +11,7 @@ const TagsInputExample = ({ intl }) => {
     <TagsInput
       value={tags}
       onChange={setTags}
-      inputProps={{ placeholder: messages["form-components.tags"] }}
+      inputProps={{ placeholder: messages['form-components.tags'] }}
     />
   );
 };

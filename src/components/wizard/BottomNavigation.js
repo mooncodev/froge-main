@@ -1,9 +1,9 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
-import React from "react";
-import { WithWizard } from "react-albus";
-import { Button } from "reactstrap";
+import React from 'react';
+import { WithWizard } from 'react-albus';
+import { Button } from 'reactstrap';
 
 const BottomNavigation = ({
   className,
@@ -18,7 +18,7 @@ const BottomNavigation = ({
         <div className={`wizard-buttons ${className}`}>
           <Button
             color="primary"
-            className={`mr-1 ${steps.indexOf(step) <= 0 ? "disabled" : ""}`}
+            className={`mr-1 ${steps.indexOf(step) <= 0 ? 'disabled' : ''}`}
             onClick={() => {
               onClickPrev(previous, steps, step);
             }}
@@ -29,7 +29,7 @@ const BottomNavigation = ({
           <Button
             color="primary"
             className={
-              steps.indexOf(step) >= steps.length - 1 ? "disabled" : ""
+              steps.indexOf(step) >= steps.length - 1 ? 'disabled' : ''
             }
             onClick={() => {
               onClickNext(next, steps, step);

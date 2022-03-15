@@ -1,8 +1,8 @@
 /* eslint-disable prefer-rest-params */
-import React, { useEffect, useRef, useState } from "react";
-import { Chart } from "chart.js";
+import React, { useEffect, useRef, useState } from 'react';
+import { Chart } from 'chart.js';
 
-import { radarChartOptions } from "./config";
+import { radarChartOptions } from './config';
 
 const Radar = ({ data, shadow = false }) => {
   const chartContainer = useRef(null);
@@ -19,7 +19,7 @@ const Radar = ({ data, shadow = false }) => {
               chart: { ctx },
             } = this;
             ctx.save();
-            ctx.shadowColor = "rgba(0,0,0,0.2)";
+            ctx.shadowColor = 'rgba(0,0,0,0.2)';
             ctx.shadowBlur = 7;
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 7;
@@ -29,9 +29,9 @@ const Radar = ({ data, shadow = false }) => {
           },
         });
       }
-      const context = chartContainer.current.getContext("2d");
+      const context = chartContainer.current.getContext('2d');
       const newChartInstance = new Chart(context, {
-        type: shadow ? "radarWithShadow" : "radar",
+        type: shadow ? 'radarWithShadow' : 'radar',
         options: radarChartOptions,
         data,
       });

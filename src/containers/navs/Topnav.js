@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-use-before-define */
-import React, { useState } from "react";
-import { injectIntl } from "react-intl";
+import React, { useState } from 'react';
+import { injectIntl } from 'react-intl';
 
 import {
   UncontrolledDropdown,
@@ -10,16 +10,16 @@ import {
   DropdownToggle,
   DropdownMenu,
   Input,
-} from "reactstrap";
+} from 'reactstrap';
 
-import { NavLink } from "react-router-dom";
-import { connect } from "react-redux";
+import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import {
   setContainerClassnames,
   clickOnMobileMenu,
   changeLocale,
-} from "redux/actions";
+} from 'redux/actions';
 
 import {
   menuHiddenBreakpoint,
@@ -27,13 +27,13 @@ import {
   localeOptions,
   isDarkSwitchActive,
   appRoot,
-} from "constants/defaultValues";
+} from 'constants/defaultValues';
 
-import { MobileMenuIcon, MenuIcon } from "components/svg";
-import { getDirection, setDirection } from "helpers/Utils";
-import TopnavEasyAccess from "./Topnav.EasyAccess";
-import TopnavNotifications from "./Topnav.Notifications";
-import TopnavDarkSwitch from "./Topnav.DarkSwitch";
+import { MobileMenuIcon, MenuIcon } from 'components/svg';
+import { getDirection, setDirection } from 'helpers/Utils';
+import TopnavEasyAccess from './Topnav.EasyAccess';
+import TopnavNotifications from './Topnav.Notifications';
+import TopnavDarkSwitch from './Topnav.DarkSwitch';
 
 const TopNav = ({
   intl,
@@ -47,11 +47,11 @@ const TopNav = ({
   changeLocaleAction,
 }) => {
   const [isInFullScreen, setIsInFullScreen] = useState(false);
-  const [searchKeyword, setSearchKeyword] = useState("");
+  const [searchKeyword, setSearchKeyword] = useState('');
 
   const search = () => {
     history.push(`${searchPath}?key=${searchKeyword}`);
-    setSearchKeyword("");
+    setSearchKeyword('');
   };
 
   const handleChangeLocale = (_locale, direction) => {
@@ -80,22 +80,22 @@ const TopNav = ({
   const handleSearchIconClick = (e) => {
     if (window.innerWidth < menuHiddenBreakpoint) {
       let elem = e.target;
-      if (!e.target.classList.contains("search")) {
-        if (e.target.parentElement.classList.contains("search")) {
+      if (!e.target.classList.contains('search')) {
+        if (e.target.parentElement.classList.contains('search')) {
           elem = e.target.parentElement;
         } else if (
-          e.target.parentElement.parentElement.classList.contains("search")
+          e.target.parentElement.parentElement.classList.contains('search')
         ) {
           elem = e.target.parentElement.parentElement;
         }
       }
 
-      if (elem.classList.contains("mobile-view")) {
+      if (elem.classList.contains('mobile-view')) {
         search();
-        elem.classList.remove("mobile-view");
+        elem.classList.remove('mobile-view');
         removeEventsSearch();
       } else {
-        elem.classList.add("mobile-view");
+        elem.classList.add('mobile-view');
         addEventsSearch();
       }
     } else {
@@ -109,39 +109,39 @@ const TopNav = ({
     if (
       e.target &&
       e.target.classList &&
-      (e.target.classList.contains("navbar") ||
-        e.target.classList.contains("simple-icon-magnifier"))
+      (e.target.classList.contains('navbar') ||
+        e.target.classList.contains('simple-icon-magnifier'))
     ) {
       isSearchClick = true;
-      if (e.target.classList.contains("simple-icon-magnifier")) {
+      if (e.target.classList.contains('simple-icon-magnifier')) {
         search();
       }
     } else if (
       e.target.parentElement &&
       e.target.parentElement.classList &&
-      e.target.parentElement.classList.contains("search")
+      e.target.parentElement.classList.contains('search')
     ) {
       isSearchClick = true;
     }
 
     if (!isSearchClick) {
-      const input = document.querySelector(".mobile-view");
-      if (input && input.classList) input.classList.remove("mobile-view");
+      const input = document.querySelector('.mobile-view');
+      if (input && input.classList) input.classList.remove('mobile-view');
       removeEventsSearch();
-      setSearchKeyword("");
+      setSearchKeyword('');
     }
   };
 
   const removeEventsSearch = () => {
-    document.removeEventListener("click", handleDocumentClickSearch, true);
+    document.removeEventListener('click', handleDocumentClickSearch, true);
   };
 
   const addEventsSearch = () => {
-    document.addEventListener("click", handleDocumentClickSearch, true);
+    document.addEventListener('click', handleDocumentClickSearch, true);
   };
 
   const handleSearchInputKeyPress = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       search();
     }
   };
@@ -173,15 +173,15 @@ const TopNav = ({
   };
 
   const handleLogout = () => {
-    console.log("logout");
+    console.log('logout');
   };
 
   const menuButtonClick = (e, _clickCount, _conClassnames) => {
     e.preventDefault();
 
     setTimeout(() => {
-      const event = document.createEvent("HTMLEvents");
-      event.initEvent("resize", false, false);
+      const event = document.createEvent('HTMLEvents');
+      event.initEvent('resize', false, false);
       window.dispatchEvent(event);
     }, 350);
     setContainerClassnamesAction(
@@ -223,7 +223,7 @@ const TopNav = ({
           <Input
             name="searchKeyword"
             id="searchKeyword"
-            placeholder={messages["menu.search"]}
+            placeholder={messages['menu.search']}
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
             onKeyPress={(e) => handleSearchInputKeyPress(e)}

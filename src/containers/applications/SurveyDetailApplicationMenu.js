@@ -1,9 +1,9 @@
-import React from "react";
-import { Badge, FormGroup, CustomInput } from "reactstrap";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { Badge, FormGroup, CustomInput } from 'reactstrap';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { NavLink } from 'react-router-dom';
 
-import ApplicationMenu from "components/common/ApplicationMenu";
+import ApplicationMenu from 'components/common/ApplicationMenu';
 
 const SurveyDetailApplicationMenu = () => {
   return (
@@ -25,7 +25,7 @@ const SurveyDetailApplicationMenu = () => {
               <NavLink to="#" location={{}}>
                 <i className="simple-icon-check" />
                 Completed Surveys
-                <span className="float-right">24</span>{" "}
+                <span className="float-right">24</span>{' '}
               </NavLink>
             </li>
           </ul>
@@ -57,18 +57,18 @@ const SurveyDetailApplicationMenu = () => {
             <NavLink to="#" location={{}}>
               <Badge className="mb-1" color="outline-primary" pill>
                 NEW FRAMEWORK
-              </Badge>{" "}
+              </Badge>{' '}
             </NavLink>
 
             <NavLink to="#" location={{}}>
               <Badge className="mb-1" color="outline-secondary" pill>
                 EDUCATION
-              </Badge>{" "}
+              </Badge>{' '}
             </NavLink>
             <NavLink to="#" location={{}}>
               <Badge className="mb-1" color="outline-dark" pill>
                 PERSONAL
-              </Badge>{" "}
+              </Badge>{' '}
             </NavLink>
           </div>
         </div>

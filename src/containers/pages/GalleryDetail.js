@@ -1,24 +1,24 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useState } from "react";
-import Lightbox from "react-image-lightbox";
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import Lightbox from 'react-image-lightbox';
+import { NavLink } from 'react-router-dom';
 
 const images = [
-  "/assets/img/products/fruitcake.jpg",
-  "/assets/img/products/napoleonshat.jpg",
-  "/assets/img/products/tea-loaf.jpg",
-  "/assets/img/products/magdalena.jpg",
-  "/assets/img/products/marble-cake.jpg",
-  "/assets/img/products/parkin.jpg",
+  '/assets/img/products/fruitcake.jpg',
+  '/assets/img/products/napoleonshat.jpg',
+  '/assets/img/products/tea-loaf.jpg',
+  '/assets/img/products/magdalena.jpg',
+  '/assets/img/products/marble-cake.jpg',
+  '/assets/img/products/parkin.jpg',
 ];
 
 const thumbs = [
-  "/assets/img/products/fruitcake-thumb.jpg",
-  "/assets/img/products/napoleonshat-thumb.jpg",
-  "/assets/img/products/tea-loaf-thumb.jpg",
-  "/assets/img/products/magdalena-thumb.jpg",
-  "/assets/img/products/marble-cake-thumb.jpg",
-  "/assets/img/products/parkin-thumb.jpg",
+  '/assets/img/products/fruitcake-thumb.jpg',
+  '/assets/img/products/napoleonshat-thumb.jpg',
+  '/assets/img/products/tea-loaf-thumb.jpg',
+  '/assets/img/products/magdalena-thumb.jpg',
+  '/assets/img/products/marble-cake-thumb.jpg',
+  '/assets/img/products/parkin-thumb.jpg',
 ];
 
 const GalleryDetail = () => {

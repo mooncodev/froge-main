@@ -1,70 +1,70 @@
 /* eslint-disable no-alert */
-import React from "react";
-import { Card, CardBody, CardTitle, Button, CardSubtitle } from "reactstrap";
-import IntlMessages from "helpers/IntlMessages";
-import { NotificationManager } from "components/common/react-notifications";
+import React from 'react';
+import { Card, CardBody, CardTitle, Button, CardSubtitle } from 'reactstrap';
+import IntlMessages from 'helpers/IntlMessages';
+import { NotificationManager } from 'components/common/react-notifications';
 
 const NotificationExamples = () => {
   const createNotification = (type, className) => {
-    const cName = className || "";
+    const cName = className || '';
     switch (type) {
-      case "primary":
+      case 'primary':
         NotificationManager.primary(
-          "This is a notification!",
-          "Primary Notification",
+          'This is a notification!',
+          'Primary Notification',
           3000,
           null,
           null,
           cName
         );
         break;
-      case "secondary":
+      case 'secondary':
         NotificationManager.secondary(
-          "This is a notification!",
-          "Secondary Notification",
+          'This is a notification!',
+          'Secondary Notification',
           3000,
           null,
           null,
           cName
         );
         break;
-      case "info":
-        NotificationManager.info("Info message", "", 3000, null, null, cName);
+      case 'info':
+        NotificationManager.info('Info message', '', 3000, null, null, cName);
         break;
-      case "success":
+      case 'success':
         NotificationManager.success(
-          "Success message",
-          "Title here",
+          'Success message',
+          'Title here',
           3000,
           null,
           null,
           cName
         );
         break;
-      case "warning":
+      case 'warning':
         NotificationManager.warning(
-          "Warning message",
-          "Close after 3000ms",
+          'Warning message',
+          'Close after 3000ms',
           3000,
           null,
           null,
           cName
         );
         break;
-      case "error":
+      case 'error':
         NotificationManager.error(
-          "Error message",
-          "Click me!",
+          'Error message',
+          'Click me!',
           5000,
           () => {
-            alert("callback");
+            alert('callback');
           },
           null,
           cName
         );
         break;
       default:
-        NotificationManager.info("Info message");
+        NotificationManager.info('Info message');
         break;
     }
   };
@@ -82,47 +82,47 @@ const NotificationExamples = () => {
           outline
           className="mb-3"
           color="primary"
-          onClick={() => createNotification("primary")}
+          onClick={() => createNotification('primary')}
         >
           <IntlMessages id="alert.primary" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           outline
           className="mb-3"
           color="secondary"
-          onClick={() => createNotification("secondary")}
+          onClick={() => createNotification('secondary')}
         >
           <IntlMessages id="alert.secondary" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           outline
           className="mb-3"
           color="info"
-          onClick={() => createNotification("info")}
+          onClick={() => createNotification('info')}
         >
           <IntlMessages id="alert.info" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           outline
           className="mb-3"
           color="success"
-          onClick={() => createNotification("success")}
+          onClick={() => createNotification('success')}
         >
           <IntlMessages id="alert.success" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           outline
           className="mb-3"
           color="warning"
-          onClick={() => createNotification("warning")}
+          onClick={() => createNotification('warning')}
         >
           <IntlMessages id="alert.warning" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           outline
           className="mb-3"
           color="danger"
-          onClick={() => createNotification("error")}
+          onClick={() => createNotification('error')}
         >
           <IntlMessages id="alert.error" />
         </Button>
@@ -132,42 +132,42 @@ const NotificationExamples = () => {
         <Button
           className="mb-3"
           color="primary"
-          onClick={() => createNotification("primary", "filled")}
+          onClick={() => createNotification('primary', 'filled')}
         >
           <IntlMessages id="alert.primary" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           className="mb-3"
           color="secondary"
-          onClick={() => createNotification("secondary", "filled")}
+          onClick={() => createNotification('secondary', 'filled')}
         >
           <IntlMessages id="alert.secondary" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           className="mb-3"
           color="info"
-          onClick={() => createNotification("info", "filled")}
+          onClick={() => createNotification('info', 'filled')}
         >
           <IntlMessages id="alert.info" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           className="mb-3"
           color="success"
-          onClick={() => createNotification("success", "filled")}
+          onClick={() => createNotification('success', 'filled')}
         >
           <IntlMessages id="alert.success" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           className="mb-3"
           color="warning"
-          onClick={() => createNotification("warning", "filled")}
+          onClick={() => createNotification('warning', 'filled')}
         >
           <IntlMessages id="alert.warning" />
-        </Button>{" "}
+        </Button>{' '}
         <Button
           className="mb-3"
           color="danger"
-          onClick={() => createNotification("error", "filled")}
+          onClick={() => createNotification('error', 'filled')}
         >
           <IntlMessages id="alert.error" />
         </Button>

@@ -1,13 +1,13 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { injectIntl } from "react-intl";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { injectIntl } from 'react-intl';
 
 const CommentWithLikes = ({ intl, className, data }) => {
   const getLikeLabel = (likeCount) => {
     if (likeCount === 1) {
-      return intl.messages["pages.like"];
+      return intl.messages['pages.like'];
     }
-    return intl.messages["pages.likes"];
+    return intl.messages['pages.likes'];
   };
 
   return (
@@ -34,7 +34,7 @@ const CommentWithLikes = ({ intl, className, data }) => {
             <span>
               {data.likes > 0
                 ? `${data.likes} ${getLikeLabel(data.likes)}`
-                : ""}
+                : ''}
             </span>
             <i className="simple-icon-heart ml-2" />
           </NavLink>

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import IntlMessages from "helpers/IntlMessages";
-import GradientCard from "components/cards/GradientCard";
+import IntlMessages from 'helpers/IntlMessages';
+import GradientCard from 'components/cards/GradientCard';
 
 const GradientCardContainer = () => {
   return (
