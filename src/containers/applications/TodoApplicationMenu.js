@@ -18,7 +18,7 @@ const TodoApplicationMenu = ({
   todoItems,
   filter,
   allTodoItems,
-  loading,
+  loaded,
   labels,
   categories,
   getTodoListWithFilterAction,
@@ -42,7 +42,7 @@ const TodoApplicationMenu = ({
                 <i className="simple-icon-reload" />
                 <IntlMessages id="todo.all-tasks" />
                 <span className="float-right">
-                  {loading && allTodoItems.length}
+                  {loaded && allTodoItems.length}
                 </span>
               </NavLink>
             </NavItem>
@@ -62,7 +62,7 @@ const TodoApplicationMenu = ({
                 <i className="simple-icon-refresh" />
                 <IntlMessages id="todo.pending-tasks" />
                 <span className="float-right">
-                  {loading &&
+                  {loaded &&
                     todoItems.filter((x) => x.status === 'PENDING').length}
                 </span>
               </NavLink>
@@ -83,7 +83,7 @@ const TodoApplicationMenu = ({
                 <i className="simple-icon-check" />
                 <IntlMessages id="todo.completed-tasks" />
                 <span className="float-right">
-                  {loading &&
+                  {loaded &&
                     todoItems.filter((x) => x.status === 'COMPLETED').length}
                 </span>
               </NavLink>
@@ -151,14 +151,14 @@ const TodoApplicationMenu = ({
 };
 
 const mapStateToProps = ({ todoApp }) => {
-  const { todoItems, filter, allTodoItems, loading, labels, categories } =
+  const { todoItems, filter, allTodoItems, loaded, labels, categories } =
     todoApp;
 
   return {
     todoItems,
     filter,
     allTodoItems,
-    loading,
+    loaded,
     labels,
     categories,
   };

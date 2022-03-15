@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Card, CardBody, Badge } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { Colxx } from 'components/common/CustomBootstrap';
-import orders from '../../data/orders';
+import orders from 'data/orders';
 
 const OrderItem = ({ name, address, date, status, statusColor }) => {
   return (

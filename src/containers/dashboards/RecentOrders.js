@@ -5,8 +5,8 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Card, CardBody, CardTitle, Badge } from 'reactstrap';
 
 import IntlMessages from 'helpers/IntlMessages';
-import { appRoot } from 'constants/defaultValues';
-import data from '../../data/products';
+import data from 'data/products';
+import { adminRoot } from 'constants/defaultValues';
 
 const RecentOrders = () => {
   return (
@@ -28,7 +28,7 @@ const RecentOrders = () => {
               return (
                 <div key={index} className="d-flex flex-row mb-3">
                   <NavLink
-                    to={`${appRoot}/pages/product/details`}
+                    to={`${adminRoot}/pages/product/details`}
                     className="d-block position-relative"
                   >
                     <img
@@ -47,7 +47,7 @@ const RecentOrders = () => {
                   </NavLink>
 
                   <div className="pl-3 pt-2 pr-2 pb-2">
-                    <NavLink to={`${appRoot}/pages/product/details`}>
+                    <NavLink to={`${adminRoot}/pages/product/details`}>
                       <p className="list-item-heading">{order.title}</p>
                       <div className="pr-4">
                         <p className="text-muted mb-1 text-small">

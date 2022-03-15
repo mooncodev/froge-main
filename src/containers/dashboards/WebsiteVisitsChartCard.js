@@ -11,7 +11,7 @@ import {
 import IntlMessages from 'helpers/IntlMessages';
 import { AreaChart } from 'components/charts';
 
-import { areaChartData } from '../../data/charts';
+import { areaChartData } from 'data/charts';
 
 const WebsiteVisitsChartCard = ({ className = '', controls = true }) => {
   return (

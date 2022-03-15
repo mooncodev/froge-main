@@ -1,5 +1,5 @@
 import { getCurrentLanguage } from 'helpers/Utils';
-import { CHANGE_LOCALE } from '../constants';
+import { CHANGE_LOCALE } from '../contants';
 
 const INIT_STATE = {
   locale: getCurrentLanguage(),

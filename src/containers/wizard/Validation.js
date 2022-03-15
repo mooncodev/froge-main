@@ -42,30 +42,11 @@ const Validation = ({ intl }) => {
   const forms = [createRef(null), createRef(null), createRef(null)];
   const [bottomNavHidden, setBottomNavHidden] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [fields, setFields] = useState([
-    {
-      valid: false,
-      name: 'name',
-      value: '',
-    },
-    {
-      valid: false,
-      name: 'email',
-      value: '',
-    },
-    {
-      valid: false,
-      name: 'password',
-      value: '',
-    },
-  ]);
-
-  const asyncLoading = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  };
+  const [fields, setFields] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
 
   const onClickNext = (goToNext, steps, step) => {
     if (steps.length - 1 <= steps.indexOf(step)) {
@@ -73,21 +54,23 @@ const Validation = ({ intl }) => {
     }
     const formIndex = steps.indexOf(step);
     const form = forms[formIndex].current;
-    const { name } = fields[formIndex];
+
     form.submitForm().then(() => {
-      const newFields = [...fields];
+      if (!form.isDirty && form.isValid) {
+        const newFields = { ...fields, ...form.values };
+        setFields(newFields);
 
-      newFields[formIndex].value = form.values[name];
-      newFields[formIndex].valid = !form.errors[name];
-      setFields(newFields);
-
-      if (!form.errors[name] && form.touched[name]) {
+        if (steps.length - 2 <= steps.indexOf(step)) {
+          // done
+          setBottomNavHidden(true);
+          setLoading(true);
+          console.log(newFields);
+          setTimeout(() => {
+            setLoading(false);
+          }, 3000);
+        }
         goToNext();
         step.isDone = true;
-        if (steps.length - 2 <= steps.indexOf(step)) {
-          setBottomNavHidden(true);
-          asyncLoading();
-        }
       }
     });
   };
@@ -115,8 +98,9 @@ const Validation = ({ intl }) => {
                 <Formik
                   innerRef={forms[0]}
                   initialValues={{
-                    name: fields[0].value,
+                    name: fields.name,
                   }}
+                  validateOnMount
                   onSubmit={() => {}}
                 >
                   {({ errors, touched }) => (
@@ -148,9 +132,10 @@ const Validation = ({ intl }) => {
                 <Formik
                   innerRef={forms[1]}
                   initialValues={{
-                    email: fields[1].value,
+                    email: fields.email,
                   }}
                   onSubmit={() => {}}
+                  validateOnMount
                 >
                   {({ errors, touched }) => (
                     <Form className="av-tooltip tooltip-label-right">
@@ -181,9 +166,10 @@ const Validation = ({ intl }) => {
                 <Formik
                   innerRef={forms[2]}
                   initialValues={{
-                    password: fields[2].value,
+                    password: fields.password,
                   }}
                   onSubmit={() => {}}
+                  validateOnMount
                 >
                   {({ errors, touched }) => (
                     <Form className="av-tooltip tooltip-label-right error-l-75">

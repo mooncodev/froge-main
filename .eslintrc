@@ -53,13 +53,10 @@
     "react-hooks/exhaustive-deps": 1,
     "react/jsx-props-no-spreading": 0,
     "no-console": "off",
-    "no-unused-vars": "off",
     "react/prop-types": 0,
     "prettier/prettier": [
       "warn"
-    ],
-    "eslint linebreak-style": [0, "error", "windows"],
-    "quotes": ["warn", "single"]
+    ]
   },
   "globals": {
     "window": true,

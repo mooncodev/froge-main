@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from 'react';
 import { FormGroup, Label, CustomInput } from 'reactstrap';
+import { colors } from 'constants/defaultValues';
 import {
   getCurrentColor,
   setCurrentColor,
   getCurrentRadius,
   setCurrentRadius,
 } from 'helpers/Utils';
-import { colors } from 'constants/defaultValues';
 
 const ColorSwitcher = () => {
   const containerRef = useRef();
@@ -70,7 +70,7 @@ const ColorSwitcher = () => {
               }`}
               onClick={(e) => changeThemeColor(e, `light.${color}`)}
             >
-              <span> </span>
+              <span>{` `}</span>
             </a>
           ))}
         </div>
@@ -84,7 +84,7 @@ const ColorSwitcher = () => {
               }`}
               onClick={(e) => changeThemeColor(e, `light.${color}`)}
             >
-              <span> </span>
+              <span>{` `}</span>
             </a>
           ))}
         </div>
@@ -99,7 +99,7 @@ const ColorSwitcher = () => {
               }`}
               onClick={(e) => changeThemeColor(e, `dark.${color}`)}
             >
-              <span> </span>
+              <span>{` `}</span>
             </a>
           ))}
         </div>
@@ -113,7 +113,7 @@ const ColorSwitcher = () => {
               }`}
               onClick={(e) => changeThemeColor(e, `dark.${color}`)}
             >
-              <span> </span>
+              <span>{` `}</span>
             </a>
           ))}
         </div>

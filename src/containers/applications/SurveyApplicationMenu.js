@@ -152,8 +152,14 @@ const SurveyApplicationMenu = ({
   );
 };
 const mapStateToProps = ({ surveyListApp }) => {
-  const { surveyItems, filter, allSurveyItems, loading, labels, categories } =
-    surveyListApp;
+  const {
+    surveyItems,
+    filter,
+    allSurveyItems,
+    loading,
+    labels,
+    categories,
+  } = surveyListApp;
 
   return {
     surveyItems,

@@ -15,22 +15,24 @@ import {
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import {
-  setContainerClassnames,
-  clickOnMobileMenu,
-  changeLocale,
-} from 'redux/actions';
-
+import IntlMessages from 'helpers/IntlMessages';
 import {
   menuHiddenBreakpoint,
   searchPath,
   localeOptions,
   isDarkSwitchActive,
-  appRoot,
+  buyUrl,
+  adminRoot,
 } from 'constants/defaultValues';
-
 import { MobileMenuIcon, MenuIcon } from 'components/svg';
 import { getDirection, setDirection } from 'helpers/Utils';
+import {
+  setContainerClassnames,
+  clickOnMobileMenu,
+  logoutUser,
+  changeLocale,
+} from 'redux/actions';
+
 import TopnavEasyAccess from './Topnav.EasyAccess';
 import TopnavNotifications from './Topnav.Notifications';
 import TopnavDarkSwitch from './Topnav.DarkSwitch';
@@ -44,6 +46,7 @@ const TopNav = ({
   locale,
   setContainerClassnamesAction,
   clickOnMobileMenuAction,
+  logoutUserAction,
   changeLocaleAction,
 }) => {
   const [isInFullScreen, setIsInFullScreen] = useState(false);
@@ -173,7 +176,7 @@ const TopNav = ({
   };
 
   const handleLogout = () => {
-    console.log('logout');
+    logoutUserAction(history);
   };
 
   const menuButtonClick = (e, _clickCount, _conClassnames) => {
@@ -260,8 +263,17 @@ const TopNav = ({
             </DropdownMenu>
           </UncontrolledDropdown>
         </div>
+        <div className="position-relative d-none d-none d-lg-inline-block">
+          <a
+            className="btn btn-outline-primary btn-sm ml-2"
+            target="_top"
+            href={buyUrl}
+          >
+            <IntlMessages id="user.buy" />
+          </a>
+        </div>
       </div>
-      <NavLink className="navbar-logo" to={appRoot}>
+      <NavLink className="navbar-logo" to={adminRoot}>
         <span className="logo d-none d-xs-block" />
         <span className="logo-mobile d-block d-xs-none" />
       </NavLink>
@@ -323,6 +335,7 @@ export default injectIntl(
   connect(mapStateToProps, {
     setContainerClassnamesAction: setContainerClassnames,
     clickOnMobileMenuAction: clickOnMobileMenu,
+    logoutUserAction: logoutUser,
     changeLocaleAction: changeLocale,
   })(TopNav)
 );

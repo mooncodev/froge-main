@@ -3,15 +3,21 @@ import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import AppLayout from 'layout/AppLayout';
+// import { ProtectedRoute, UserRole } from 'helpers/authHelper';
 
-const FrogeX = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-frogeX" */ './frogex')
+const Dashboards = React.lazy(() =>
+  import(/* webpackChunkName: "dashboards" */ './dashboards')
 );
-const SecondMenu = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
+const Pages = React.lazy(() =>
+  import(/* webpackChunkName: "pages" */ './pages')
 );
+const Applications = React.lazy(() =>
+  import(/* webpackChunkName: "applications" */ './applications')
+);
+const Ui = React.lazy(() => import(/* webpackChunkName: "ui" */ './ui'));
+const Menu = React.lazy(() => import(/* webpackChunkName: "menu" */ './menu'));
 const BlankPage = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
+  import(/* webpackChunkName: "blank-page" */ './blank-page')
 );
 
 const App = ({ match }) => {
@@ -20,14 +26,35 @@ const App = ({ match }) => {
       <div className="dashboard-wrapper">
         <Suspense fallback={<div className="loading" />}>
           <Switch>
-            <Redirect exact from={`${match.url}/`} to={`${match.url}/frogex`} />
-            <Route
-              path={`${match.url}/frogex`}
-              render={(props) => <FrogeX {...props} />}
+            <Redirect
+              exact
+              from={`${match.url}/`}
+              to={`${match.url}/dashboards`}
             />
             <Route
-              path={`${match.url}/second-menu`}
-              render={(props) => <SecondMenu {...props} />}
+              path={`${match.url}/dashboards`}
+              render={(props) => <Dashboards {...props} />}
+            />
+            <Route
+              path={`${match.url}/applications`}
+              render={(props) => <Applications {...props} />}
+            />
+            {/* <ProtectedRoute
+                    path={`${match.url}/applications`}
+                    component={Applications}
+                    roles={[UserRole.Admin]}
+            /> */}
+            <Route
+              path={`${match.url}/pages`}
+              render={(props) => <Pages {...props} />}
+            />
+            <Route
+              path={`${match.url}/ui`}
+              render={(props) => <Ui {...props} />}
+            />
+            <Route
+              path={`${match.url}/menu`}
+              render={(props) => <Menu {...props} />}
             />
             <Route
               path={`${match.url}/blank-page`}

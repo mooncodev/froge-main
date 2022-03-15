@@ -5,7 +5,7 @@ import IntlMessages from 'helpers/IntlMessages';
 import { Colxx } from 'components/common/CustomBootstrap';
 import IconCard from 'components/cards/IconCard';
 
-import data from '../../data/iconCards';
+import data from 'data/iconCards';
 
 const IconCards = () => {
   return (

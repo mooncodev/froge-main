@@ -9,9 +9,9 @@ let resizeTimeOut = -1;
 let mountTimeOut = -1;
 
 function GlideComponent(props) {
-  const { settings, children } = props;
   let carousel;
   let glideCarousel;
+
   const onResize = () => {
     clearTimeout(resizeTimeOut);
     resizeTimeOut = setTimeout(() => {
@@ -22,7 +22,7 @@ function GlideComponent(props) {
 
   const initGlide = () => {
     glideCarousel = new Glide(carousel, {
-      settings,
+      ...props.settings,
       direction: getDirection().direction,
     });
     glideCarousel.mount();
@@ -51,7 +51,7 @@ function GlideComponent(props) {
   }, []);
 
   const renderDots = () => {
-    const total = React.Children.count(children);
+    const total = React.Children.count(props.children);
     const dots = [];
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < total; i++) {

@@ -7,10 +7,19 @@ const sliderHandle = ({ value, dragging, index, offset, ...restProps }) => {
   const positionStyle = {
     position: 'absolute',
     left: `${offset}%`,
+    top: '150%',
   };
+  const positionVerticalStyle = {
+    position: 'absolute',
+    top: `${90 - offset}%`,
+  };
+
   return (
     <span key={index}>
-      <div className="rc-slider-tooltip" style={positionStyle}>
+      <div
+        className="rc-slider-tooltip"
+        style={restProps.vertical ? positionVerticalStyle : positionStyle}
+      >
         {`$${value}`}
       </div>
       <Slider.Handle value={value} offset={offset} {...restProps} />

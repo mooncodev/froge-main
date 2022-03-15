@@ -15,7 +15,7 @@ import IntlMessages from 'helpers/IntlMessages';
 import { Colxx } from 'components/common/CustomBootstrap';
 import ThumbnailImage from 'components/cards/ThumbnailImage';
 import ThumbnailLetters from 'components/cards/ThumbnailLetters';
-import { appRoot } from 'constants/defaultValues';
+import { adminRoot } from 'constants/defaultValues';
 
 const UserCardExamples = () => {
   return (
@@ -35,7 +35,7 @@ const UserCardExamples = () => {
                     alt="Card image cap"
                     className="img-thumbnail border-0 rounded-circle mb-4 list-thumbnail"
                   />
-                  <NavLink to={`${appRoot}/cards`}>
+                  <NavLink to={`${adminRoot}/cards`}>
                     <CardSubtitle className="mb-1">Sarah Kortney</CardSubtitle>
                   </NavLink>
                   <CardText className="text-muted text-small mb-4">
@@ -51,7 +51,7 @@ const UserCardExamples = () => {
 
           <Colxx md="6" sm="6" lg="4" xxs="12">
             <Card className="d-flex flex-row mb-4">
-              <NavLink to={`${appRoot}/cards`} className="d-flex">
+              <NavLink to={`${adminRoot}/cards`} className="d-flex">
                 <ThumbnailImage
                   rounded
                   src="/assets/img/profiles/l-1.jpg"
@@ -62,7 +62,7 @@ const UserCardExamples = () => {
               <div className=" d-flex flex-grow-1 min-width-zero">
                 <CardBody className=" pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
                   <div className="min-width-zero">
-                    <NavLink to={`${appRoot}/cards`}>
+                    <NavLink to={`${adminRoot}/cards`}>
                       <CardSubtitle className="truncate mb-1">
                         Sarah Kortney
                       </CardSubtitle>
@@ -79,7 +79,7 @@ const UserCardExamples = () => {
             </Card>
 
             <Card className="d-flex flex-row mb-4">
-              <NavLink to={`${appRoot}/cards`} className="d-flex">
+              <NavLink to={`${adminRoot}/cards`} className="d-flex">
                 <ThumbnailLetters
                   rounded
                   text="Sarah Kortney"
@@ -89,7 +89,7 @@ const UserCardExamples = () => {
               <div className=" d-flex flex-grow-1 min-width-zero">
                 <CardBody className=" pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
                   <div className="min-width-zero">
-                    <NavLink to={`${appRoot}/cards`}>
+                    <NavLink to={`${adminRoot}/cards`}>
                       <CardSubtitle className="truncate mb-1">
                         Sarah Kortney
                       </CardSubtitle>
@@ -108,7 +108,7 @@ const UserCardExamples = () => {
 
           <Colxx md="6" sm="6" lg="4" xxs="12">
             <Card className="d-flex flex-row mb-4">
-              <NavLink to={`${appRoot}/cards`} className="d-flex">
+              <NavLink to={`${adminRoot}/cards`} className="d-flex">
                 <ThumbnailImage
                   rounded
                   small
@@ -120,7 +120,7 @@ const UserCardExamples = () => {
               <div className=" d-flex flex-grow-1 min-width-zero">
                 <CardBody className=" pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
                   <div className="min-width-zero">
-                    <NavLink to={`${appRoot}/cards`}>
+                    <NavLink to={`${adminRoot}/cards`}>
                       <CardSubtitle className="truncate mb-1">
                         Sarah Kortney
                       </CardSubtitle>
@@ -134,7 +134,7 @@ const UserCardExamples = () => {
             </Card>
 
             <Card className="d-flex flex-row mb-4">
-              <NavLink to={`${appRoot}/cards`} className="d-flex">
+              <NavLink to={`${adminRoot}/cards`} className="d-flex">
                 <ThumbnailLetters
                   rounded
                   small
@@ -145,7 +145,7 @@ const UserCardExamples = () => {
               <div className=" d-flex flex-grow-1 min-width-zero">
                 <CardBody className=" pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
                   <div className="min-width-zero">
-                    <NavLink to={`${appRoot}/cards`}>
+                    <NavLink to={`${adminRoot}/cards`}>
                       <CardSubtitle className="truncate mb-1">
                         Sarah Kortney
                       </CardSubtitle>

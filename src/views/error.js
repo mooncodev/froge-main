@@ -3,7 +3,7 @@ import { Row, Card, CardTitle } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { Colxx } from 'components/common/CustomBootstrap';
 import IntlMessages from 'helpers/IntlMessages';
-import { appRoot } from 'constants/defaultValues';
+import { adminRoot } from 'constants/defaultValues';
 
 const Error = () => {
   useEffect(() => {
@@ -40,7 +40,7 @@ const Error = () => {
                   </p>
                   <p className="display-1 font-weight-bold mb-5">404</p>
                   <NavLink
-                    to={appRoot}
+                    to={adminRoot}
                     className="btn btn-primary btn-shadow btn-lg"
                   >
                     <IntlMessages id="pages.go-back-home" />
