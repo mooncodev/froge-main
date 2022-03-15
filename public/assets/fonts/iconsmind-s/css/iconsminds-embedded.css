@@ -509,8 +509,8 @@
 .iconsminds-hamburger:before { content: '\e9d4'; } /* '' */
 .iconsminds-hot-dog:before { content: '\e9d5'; } /* '' */
 .iconsminds-webcam:before { content: '\e9d7'; } /* '' */
-.iconsminds-battery-0:before { content: '\e9d8'; } /* '' */
-.iconsminds-battery-100:before { content: '\e9d9'; } /* '' */
+.iconsminds-battery-0%:before { content: '\e9d8'; } /* '' */
+.iconsminds-battery-100%:before { content: '\e9d9'; } /* '' */
 .iconsminds-battery-charge:before { content: '\e9da'; } /* '' */
 .iconsminds-charger:before { content: '\e9db'; } /* '' */
 .iconsminds-cpu:before { content: '\e9dc'; } /* '' */

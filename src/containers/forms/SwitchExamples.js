@@ -16,10 +16,13 @@ const SwitchExamples = () => {
 
   const [checkedPrimarySmall, setCheckedPrimarySmall] = useState(false);
   const [checkedSecondarySmall, setCheckedSecondarySmall] = useState(true);
-  const [checkedPrimaryInverseSmall, setCheckedPrimaryInverseSmall] =
-    useState(true);
-  const [checkedSecondaryInverseSmall, setCheckedSecondaryInverseSmall] =
-    useState(false);
+  const [checkedPrimaryInverseSmall, setCheckedPrimaryInverseSmall] = useState(
+    true
+  );
+  const [
+    checkedSecondaryInverseSmall,
+    setCheckedSecondaryInverseSmall,
+  ] = useState(false);
 
   return (
     <Card>

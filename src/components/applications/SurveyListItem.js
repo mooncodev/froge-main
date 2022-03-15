@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardBody, Badge, CustomInput } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-import { appRoot } from 'constants/defaultValues';
+import { adminRoot } from 'constants/defaultValues';
 import { Colxx } from '../common/CustomBootstrap';
 
 const SurveyListItem = ({ item, handleCheckChange, isSelected }) => {
@@ -12,7 +12,7 @@ const SurveyListItem = ({ item, handleCheckChange, isSelected }) => {
         <div className="d-flex flex-grow-1 min-width-zero">
           <CardBody className="align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
             <NavLink
-              to={`${appRoot}/applications/survey/${item.id}`}
+              to={`${adminRoot}/applications/survey/${item.id}`}
               className="list-item-heading mb-0 truncate w-40 w-xs-100  mb-1 mt-1"
             >
               <i

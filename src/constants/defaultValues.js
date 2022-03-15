@@ -2,6 +2,7 @@ export const UserRole = {
   Admin: 0,
   Editor: 1,
 };
+
 /*
 Menu Types:
 "menu-default", "menu-sub-hidden", "menu-hidden"
@@ -24,27 +25,27 @@ export const currentUser = {
   role: UserRole.Admin,
 };
 
-export const appRoot = '/app';
+export const adminRoot = '/app';
 export const buyUrl = 'https://1.envato.market/k4z0';
-export const searchPath = `${appRoot}/#`;
+export const searchPath = `${adminRoot}/#`;
 export const servicePath = 'https://api.coloredstrategies.com';
 
 export const themeColorStorageKey = '__theme_selected_color';
-export const isMultiColorActive = false;
-export const defaultColor = 'dark.greenlime';
+export const isMultiColorActive = true;
+export const defaultColor = 'light.purplemonster';
 export const isDarkSwitchActive = true;
 export const defaultDirection = 'ltr';
 export const themeRadiusStorageKey = '__theme_radius';
 export const isAuthGuardActive = false;
 export const colors = [
-  // 'bluenavy',
-  // 'blueyale',
-  // 'blueolympic',
-  // 'greenmoss',
+  'bluenavy',
+  'blueyale',
+  'blueolympic',
+  'greenmoss',
   'greenlime',
-  // 'purplemonster',
-  // 'orangecarrot',
-  // 'redruby',
-  // 'yellowgranola',
-  // 'greysteel',
+  'purplemonster',
+  'orangecarrot',
+  'redruby',
+  'yellowgranola',
+  'greysteel',
 ];

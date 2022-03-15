@@ -30,7 +30,7 @@ module.exports = {
   'menu.home': 'Home',
   'menu.app': 'Home',
   'menu.dashboards': 'Dashboards',
-  'menu.frogex': 'FrogeX',
+  'menu.gogo': 'Gogo',
   'menu.start': 'Start',
   'menu.second-menu': 'Second Menu',
   'menu.second': 'Second',

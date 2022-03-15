@@ -3,7 +3,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const CalendarToolbar = ({ toolbar }) => {
+const CalendarToolbar = (toolbar) => {
   const goToBack = () => {
     toolbar.onNavigate('PREV');
   };

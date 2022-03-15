@@ -181,7 +181,7 @@ const ListPageHeading = ({
                 <IntlMessages id="pages.viewing" />
                 {startIndex + 1}-
                 {totalItemCount >= endIndex ? endIndex : totalItemCount}
-                {' | '}
+                {` | `}
                 <IntlMessages id="pages.total" />
                 {totalItemCount}
               </span>

@@ -6,9 +6,9 @@ import { NavLink } from 'react-router-dom';
 
 import IntlMessages from 'helpers/IntlMessages';
 
-import Rating from 'components/common/Rating';
-import { appRoot } from 'constants/defaultValues';
 import { comments } from '../../data/comments';
+import Rating from 'components/common/Rating';
+import { adminRoot } from 'constants/defaultValues';
 
 const NewComments = ({ className = '', displayRate = false }) => {
   return (
@@ -27,7 +27,7 @@ const NewComments = ({ className = '', displayRate = false }) => {
                   key={index}
                   className="d-flex flex-row mb-3 pb-3 border-bottom"
                 >
-                  <NavLink to={`${appRoot}/pages/product/details`}>
+                  <NavLink to={`${adminRoot}/pages/product/details`}>
                     <img
                       src={item.thumb}
                       alt={item.title}
@@ -36,7 +36,7 @@ const NewComments = ({ className = '', displayRate = false }) => {
                   </NavLink>
 
                   <div className="pl-3 pr-2">
-                    <NavLink to={`${appRoot}/pages/product/details`}>
+                    <NavLink to={`${adminRoot}/pages/product/details`}>
                       <p className="font-weight-medium mb-0">{item.title}</p>
                       <p className="text-muted mb-0 text-small">
                         {item.detail}

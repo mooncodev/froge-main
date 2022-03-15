@@ -26,7 +26,7 @@ import {
   searchPath,
   localeOptions,
   isDarkSwitchActive,
-  appRoot,
+  adminRoot,
 } from 'constants/defaultValues';
 
 import { MobileMenuIcon, MenuIcon } from 'components/svg';
@@ -261,7 +261,7 @@ const TopNav = ({
           </UncontrolledDropdown>
         </div>
       </div>
-      <NavLink className="navbar-logo" to={appRoot}>
+      <NavLink className="navbar-logo" to={adminRoot}>
         <span className="logo d-none d-xs-block" />
         <span className="logo-mobile d-block d-xs-none" />
       </NavLink>

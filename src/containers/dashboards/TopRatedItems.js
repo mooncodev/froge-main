@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import IntlMessages from 'helpers/IntlMessages';
 import Rating from 'components/common/Rating';
-import GlideComponent from 'components/carousel/GlideComponent';
 import data from '../../data/topRatedItems';
+import GlideComponent from 'components/carousel/GlideComponent';
 
 const TopRatedItem = ({ image, order, title, rate, rateCount }) => (
   <div>

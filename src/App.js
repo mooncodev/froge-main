@@ -10,7 +10,7 @@ import { IntlProvider } from 'react-intl';
 import AppLocale from './lang';
 import ColorSwitcher from './components/common/ColorSwitcher';
 import { NotificationContainer } from './components/common/react-notifications';
-import { isMultiColorActive, appRoot } from './constants/defaultValues';
+import { isMultiColorActive, adminRoot } from './constants/defaultValues';
 import { getDirection } from './helpers/Utils';
 
 const ViewHome = React.lazy(() =>
@@ -54,7 +54,7 @@ class App extends React.Component {
               <Router>
                 <Switch>
                   <Route
-                    path={appRoot}
+                    path={adminRoot}
                     render={(props) => <ViewApp {...props} />}
                   />
                   <Route
@@ -69,7 +69,7 @@ class App extends React.Component {
                   />
                   <Redirect to="/error" />
                   {/*
-                  <Redirect exact from="/" to={appRoot} />
+                  <Redirect exact from="/" to={adminRoot} />
                   */}
                   <Redirect to="/error" />
                 </Switch>

@@ -30,7 +30,7 @@ module.exports = {
   'menu.home': 'Inicio',
   'menu.app': 'Inicio',
   'menu.dashboards': 'Tableros',
-  'menu.frogex': 'FrogeX',
+  'menu.gogo': 'Gogo',
   'menu.start': 'Comienzo',
   'menu.second-menu': 'Segundo menú',
   'menu.second': 'Segundo',

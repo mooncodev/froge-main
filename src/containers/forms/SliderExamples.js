@@ -5,7 +5,10 @@ import { Row } from 'reactstrap';
 import { Colxx } from 'components/common/CustomBootstrap';
 import IntlMessages from 'helpers/IntlMessages';
 
-import { SliderTooltip, RangeTooltip } from 'components/common/SliderTooltips';
+import {
+  SliderTooltip,
+  RangeTooltip,
+} from 'components/common/SliderTooltips';
 
 const SliderExamples = () => {
   return (

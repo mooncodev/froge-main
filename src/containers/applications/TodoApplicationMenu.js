@@ -151,8 +151,14 @@ const TodoApplicationMenu = ({
 };
 
 const mapStateToProps = ({ todoApp }) => {
-  const { todoItems, filter, allTodoItems, loading, labels, categories } =
-    todoApp;
+  const {
+    todoItems,
+    filter,
+    allTodoItems,
+    loading,
+    labels,
+    categories,
+  } = todoApp;
 
   return {
     todoItems,

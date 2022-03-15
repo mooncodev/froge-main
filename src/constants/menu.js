@@ -1,18 +1,18 @@
-import { appRoot } from './defaultValues';
+import { adminRoot } from './defaultValues';
 // import { UserRole } from "helpers/authHelper"
 
 const data = [
   {
     id: 'gogo',
     icon: 'iconsminds-air-balloon-1',
-    label: 'menu.frogex',
-    to: `${appRoot}/gogo`,
+    label: 'menu.gogo',
+    to: `${adminRoot}/gogo`,
     // roles: [UserRole.Admin, UserRole.Editor],
     subs: [
       {
         icon: 'simple-icon-paper-plane',
         label: 'menu.start',
-        to: `${appRoot}/gogo/start`,
+        to: `${adminRoot}/gogo/start`,
       },
     ],
   },
@@ -20,12 +20,12 @@ const data = [
     id: 'secondmenu',
     icon: 'iconsminds-three-arrow-fork',
     label: 'menu.second-menu',
-    to: `${appRoot}/second-menu`,
+    to: `${adminRoot}/second-menu`,
     subs: [
       {
         icon: 'simple-icon-paper-plane',
         label: 'menu.second',
-        to: `${appRoot}/second-menu/second`,
+        to: `${adminRoot}/second-menu/second`,
       },
     ],
   },
@@ -33,7 +33,7 @@ const data = [
     id: 'blankpage',
     icon: 'iconsminds-bucket',
     label: 'menu.blank-page',
-    to: `${appRoot}/blank-page`,
+    to: `${adminRoot}/blank-page`,
   },
   {
     id: 'docs',

@@ -12,13 +12,13 @@ import {
   Button,
   CardTitle,
 } from 'reactstrap';
-import IntlMessages from 'helpers/IntlMessages';
-import { Colxx } from 'components/common/CustomBootstrap';
 import {
   FormikReactSelect,
   FormikTagsInput,
   FormikDatePicker,
 } from './FormikFields';
+import IntlMessages from 'helpers/IntlMessages';
+import { Colxx } from 'components/common/CustomBootstrap';
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string()
