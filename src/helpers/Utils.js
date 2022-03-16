@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-cycle
 import {
   defaultDirection,
   defaultLocale,
@@ -9,7 +8,6 @@ import {
 } from 'constants/defaultValues';
 
 export const mapOrder = (array, order, key) => {
-  // eslint-disable-next-line func-names
   array.sort(function (a, b) {
     const A = a[key];
     const B = b[key];

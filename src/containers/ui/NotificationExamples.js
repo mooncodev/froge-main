@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import { Card, CardBody, CardTitle, Button, CardSubtitle } from 'reactstrap';
 import IntlMessages from 'helpers/IntlMessages';

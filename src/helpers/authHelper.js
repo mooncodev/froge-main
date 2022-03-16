@@ -1,9 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-// eslint-disable-next-line import/no-cycle
 import { isAuthGuardActive } from 'constants/defaultValues';
 import { getCurrentUser } from './Utils';
-// eslint-disable-next-line import/no-cycle
 
 const ProtectedRoute = ({
   component: Component,
@@ -44,5 +42,4 @@ const ProtectedRoute = ({
   return <Route {...rest} render={setComponent} />;
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export { ProtectedRoute };

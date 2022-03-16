@@ -1,0 +1,356 @@
+<html lang="en">
+<head>
+	<title>Froge Hopper</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="A collection of important links for froge cryptocurrency">
+	<meta name="author" content="MoonCo">
+	<link rel="stylesheet" href="assets/reset.css" />
+	<style>
+		html, body { margin: 0;padding: 0;width: 100%; /*height: 100vh;*/display:
+				flex;flex-direction: row;justify-content: center;align-items:flex-start;
+			background: #000000;}
+		body {
+			/*background-image: url(assets/frogepat_black_embossdarkblock.png);*/
+			/*background-repeat: repeat;*/
+		}
+		.glow-on-hover {
+			width: 220px;
+			height: 40px;
+			border: none;
+			outline: none;
+			background: #ffffff;
+			cursor: pointer;
+			position: relative;
+			z-index: 0;
+			border-radius: 10px;
+		}
+		.glow-on-hover:before {
+			content: '';
+			background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+			position: absolute;
+			top: -2px;
+			left:-2px;
+			background-size: 400%;
+			z-index: -1;
+			filter: blur(5px);
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			animation: glowing 20s linear infinite;
+			opacity: 0;
+			transition: opacity .3s ease-in-out;
+			border-radius: 10px;
+		}
+		.glow-on-hover:active {color: #000;}
+		.glow-on-hover:active:after {background: transparent;}
+		.glow-on-hover:hover:before {opacity: 1;}
+		.glow-on-hover:after {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #ffffff;
+			left: 0;
+			top: 0;
+			border-radius: 8px;
+		}
+
+		@keyframes glowing { 0% { background-position: 0 0; } 50% { background-position: 400% 0; } 100% { background-position: 0 0; } }
+		@keyframes neon { from {text-shadow:0 0 6px rgba(202,228,225,0.92), 0 0 30px rgba(202,228,225,0.34), 0 0 12px rgba(82, 142, 30, 0.52), 0 0 21px rgba(104, 242, 30, 0.92), 0 0 34px rgba(118, 242, 30, 0.78), 0 0 54px rgba(94, 242, 30, 0.92);} to {text-shadow:0 0 6px rgba(202,228,225,0.98), 0 0 30px rgba(202,228,225,0.42), 0 0 12px rgba(104, 242, 30, 0.58), 0 0 22px rgba(129, 242, 30, 0.84), 0 0 38px rgba(118, 242, 30, 0.88), 0 0 60px rgb(129, 242, 30);} }
+
+
+		@media (max-width: 414px) {
+			h1#heading {
+				font-size: 11.7vw;
+			}
+		}
+		#frogelinks-container {
+			max-width: 400px;
+		}
+		@media (max-width: 414px) {
+			#frogelinks-container {
+				width: 97%;
+			}
+		}
+		.btn {
+			text-decoration: none;
+			color: black;
+			opacity: 0.6;
+			padding: 19px 0px 0px 0px;
+			border: solid #1d7519 1px;
+			margin-top: 5px;
+			display:block;
+			width: 100%;
+		}
+		.btn:after{
+			display:inline-block;
+			border-right: 1px solid black;
+			border-radius:8px 0 0 8px;
+			width:70px;
+			opacity:.6;
+			height:94%;
+			margin-top:2px;
+		}
+		.btn.buy:after{
+			height:100%;
+			margin-top:0;
+		}
+		@media (max-width: 414px) {
+			.btn:after{
+				width:64px;
+			}
+		}
+		.btn>.label {
+			margin-top:3px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight:100;
+			font-family: sans-serif;
+			margin-left:60px;
+		}
+		@media (max-width: 414px) {
+			.btn>.label {
+				font-size: 17px;
+			}
+		}
+		.fnw:after{
+			/*background-color: #daeac2;*/
+		}
+		.fnw>.label{
+			/*text-align: left;*/
+			/*margin-left:75px;*/
+			/*font-style:italic;*/
+		}
+		.btn:hover{opacity:0.8;}
+		.buy {color:white;opacity: 0.8;}
+		.buy>.label{font-weight:normal;}
+		.buy:hover {opacity: 0.9;}
+		.buy {background: black;}
+		.buy:after {background: #0f3906;}
+		.i-uniswap   { background: url(assets/uniswap-logo.png) left top no-repeat; }
+		.i-1inch     { background: url(assets/1inch-logo.png) left top no-repeat; }
+		.i-whitebit  { background: url(assets/whitebit-logo.png) left top no-repeat; }
+		.i-froge     { background: url(assets/froge-logo.png) left top no-repeat; }
+		.i-ethscan   { background: url(assets/etherscan-logo.jpeg) left top no-repeat; }
+		.i-bscscan   { background: url(assets/bscscan-logo.png) left top no-repeat; }
+		.i-kektools  { background: url(assets/kektools-logo.gif) left top no-repeat; }
+		.i-dextools  { background: url(assets/dextools-logo.png) left top no-repeat; }
+		.i-medium  { background: url(assets/medium-logo.png) left top no-repeat; }
+		.i-instagram { background: url(assets/instagram-logo.png) left top no-repeat; }
+		.i-reddit    { background: url(assets/reddit-logo.png) left top no-repeat; }
+		.i-twitter   { background: url(assets/twitter-logo.png) left top no-repeat; }
+		.i-discord   { background: url(assets/discord-logo.png) left top no-repeat; }
+		.i-telegram  { background: url(assets/telegram-logo.png) left top no-repeat; }
+		.i-youtube   { background: url(assets/youtube-logo.png) left top no-repeat; }
+		.i-linkedin  { background: url(assets/linkedin-logo.png) left top no-repeat; }
+		.i-facebook  { background: url(assets/facebook-logo.png) left top no-repeat; }
+		.i-cmc       { background: url(assets/cmc-logo2.png) left top no-repeat; }
+		.i-coingecko { background: url(assets/coingecko-logo.png) left top no-repeat; }
+		.i-nomics    { background: url(assets/nomics-logo.png) left top no-repeat; }
+		.i-pancakeswap    { background: url(assets/pcs-logo.png) left top no-repeat; }
+		.i-bilaxy    { background: url(assets/bilaxy-logo.png) left top no-repeat; }
+
+		.btn>span.icon {
+			background-size: 100%; width:40px;height:40px;
+			display:block;position:absolute;left:15px;top:9px;float:left;
+		}
+		.btn>span.i-youtube {top:15px;border-radius: 0;}
+		.btn>span.i-kektools {border-radius: 10px;}
+		span.i-uniswap {top:8px;}
+		@media (max-width: 414px) {
+			.btn>span.icon {
+				width:36px;
+				top:11px;
+			}
+			.btn>span.i-youtube {top:17px;}
+
+		}
+
+		.buy>.label {
+			font-size: 22px;
+			text-align: center;
+			line-height: 0.8;
+			color: #d3ffd1;
+			animation: neon .08s ease-in-out infinite alternate;
+		}
+
+		/*-- Animation Keyframes --*/
+
+
+		.games-container {
+			opacity: 1;
+			height: 260px;
+			transition: ease 0.5s;
+		}
+		.hide {
+			transition: ease 0.5s;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			opacity:0;
+		}
+		.game{
+			width:90%;
+			margin:5px 5%;
+			background: #a8d266;
+			transition: ease 0.5s;
+
+		}
+		.games-container.hide>.game{
+			margin:0 5%;
+			transition: ease 0.5s;
+
+		}
+		.expando {
+			position:absolute;
+			top: 18px;
+			right: 14px;
+			width: 25px;
+			height: 25px;
+			background: url(./assets/chevron.png) no-repeat;
+			background-size: 100%;
+			transition: ease .5s;
+
+		}
+		.toggled>.expando{
+			transform: rotate(180deg);
+			transition: ease .5s;
+		}
+		.soon>.label:after {
+			content: "coming soon!";
+			font-size: 13px;
+			position:absolute;
+			right:10px;
+			top:40px;
+		}
+
+		@font-face {
+			font-family: 'wendyone';
+			src: url('fonts/BIRDB.ttf') format('truetype');
+		}
+		h1#heading {
+			color: #fff;
+			text-align:center;
+			font-family: wendyone, sans-serif;
+			font-weight:bold;
+			font-size: 45px;
+			margin: 15px 5px;
+			text-shadow:4px 4px 1px #134810;
+		}
+
+	</style>
+	<link rel="stylesheet" href="assets/reset.css">
+</head>
+<body>
+<div id="frogelinks-container">
+	<h1 id="heading">FROGE&nbsp;HOPPER</h1>
+
+</div>
+<script>
+	var g="https://api.1inch.exchange/v3.0/1/"
+	var links = [
+		{  text:"Buy on Uniswap",            class:"btn glow-on-hover buy", iclass:"i-uniswap", url:"https://app.uniswap.org/#/swap?outputCurrency=0x5fA54fdDF1870C344DbFaBb37dFab8700Ec0Def1"  },
+		{  text:"Buy on 1inch",              class:"btn glow-on-hover buy", iclass:"i-1inch", url:"https://app.1inch.io/#/1/swap/ETH/0x5fA54fdDF1870C344DbFaBb37dFab8700Ec0Def1"  },
+		// {  text:"Buy on PancakeSwap",        class:"btn glow-on-hover buy", iclass:"i-pancakeswap", url:"https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x93ab30c08421750d5c7993fb621c6ff32fe3f89e"  },
+		// {  text:"Buy on Whitebit",           class:"btn glow-on-hover buy", iclass:"i-whitebit", url:"https://whitebit.com/trade/FROGE_USDT"  },
+		// {  text:"FrogeSwap",                 class:"btn glow-on-hover buy", iclass:"i-froge", url:"https://froge-bridge.vercel.app/"  },
+		{  text:"Official Site",             class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://frogefinance.com"  },
+		// {  text:"Dashboard App",             class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://frogedashboard.app"  },
+		{  text:"Telegram Main",             class:"btn glow-on-hover", iclass:"i-telegram", url:"https://t.me/FrogeFinanceOfficial"  },
+		{  text:"Telegram Announcements",    class:"btn glow-on-hover", iclass:"i-telegram", url:"https://t.me/frogeannouncements"  },
+		{  text:"Merch Shop",                class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://froge.shop"  },
+		{  text:"Meme Studio",               class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://www.frogememes.com"  },
+		// {  text:"Community Site/Blog",       class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://froge.community"  },
+		// {  text:"Guides & FAQs",             class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://froge.guide"  },
+		// {  text:"BSC Bridge FAQ",            class:"btn glow-on-hover fnw", iclass:"i-froge", url:"https://froge.guide/bsc-bridge-faq.html"  },
+		// {  text:"Games!",                    class:"btn glow-on-hover fnw games-toggle", iclass:"i-froge", url:"https://froge.guide"  },
+		// {  text:"Froge Racing",              class:"btn glow-on-hover fnw game", iclass:"i-froge", url:"http://froge.innoxar.com/racing/"  },
+		// {  text:"Hoppy Froge",               class:"btn glow-on-hover fnw game soon", iclass:"i-froge", url:"javascript:void(0)"  },
+		// {  text:"Pac Froge",                 class:"btn glow-on-hover fnw game soon", iclass:"i-froge", url:"javascript:void(0)"  },
+		// {  text:"Battle Froge",              class:"btn glow-on-hover fnw game soon", iclass:"i-froge", url:"javascript:void(0)"  },
+		{  text:"Etherscan",                 class:"btn glow-on-hover", iclass:"i-ethscan", url:"https://etherscan.io/token/0x5fA54fdDF1870C344DbFaBb37dFab8700Ec0Def1"  },
+		// {  text:"BscScan",                   class:"btn glow-on-hover", iclass:"i-bscscan", url:"https://www.bscscan.com/token/0x93ab30c08421750d5c7993fb621c6ff32fe3f89e"  },
+		{  text:"Kektools",                  class:"btn glow-on-hover", iclass:"i-kektools", url:"https://kek.tools/t/0x5fa54fddf1870c344dbfabb37dfab8700ec0def1?pair=0x5119155c5644c31c94f2fbaf0ccc79c4f92fb686"  },
+		{  text:"Dextools",                  class:"btn glow-on-hover", iclass:"i-dextools", url:"https://www.dextools.io/app/ether/pair-explorer/0x5119155c5644c31c94f2fbaf0ccc79c4f92fb686"  },
+		{  text:"Medium",                    class:"btn glow-on-hover", iclass:"i-medium", url:"https://frogex.medium.com/"  },
+		{  text:"Twitter",                   class:"btn glow-on-hover", iclass:"i-twitter", url:"https://twitter.com/financefroge"  },
+		{  text:"Instagram",                 class:"btn glow-on-hover", iclass:"i-instagram", url:"https://instagram.com/frogearmy"  },
+		{  text:"Reddit",                    class:"btn glow-on-hover", iclass:"i-reddit", url:"https://reddit.com/r/FrogeFinance/"  },
+		{  text:"Youtube",                   class:"btn glow-on-hover", iclass:"i-youtube", url:"https://www.youtube.com/channel/UCifr_KT59UfBMU8MAJyj-Jg"  },
+		{  text:"LinkedIn",                  class:"btn glow-on-hover", iclass:"i-linkedin", url:"https://www.linkedin.com/company/froge-finance/"  },
+		{  text:"Facebook",                  class:"btn glow-on-hover", iclass:"i-facebook", url:"https://www.facebook.com/froge.finance/"  },
+		{  text:"Discord",                   class:"btn glow-on-hover", iclass:"i-discord", url:"https://discord.gg/KjCCcuWkVF"  },
+		// {  text:"CoinMarketCap",             class:"btn glow-on-hover", iclass:"i-cmc", url:"https://coinmarketcap.com/currencies/froge-finance/"  },
+		// {  text:"Coingecko",                 class:"btn glow-on-hover", iclass:"i-coingecko", url:"https://www.coingecko.com/en/coins/froge-finance"  },
+		// {  text:"Nomics",                    class:"btn glow-on-hover", iclass:"i-nomics", url:"https://nomics.com/assets/froge-froge-finance"  }
+	];
+
+	var container = document.getElementById('frogelinks-container');
+	var gamesContainer = document.createElement('div');
+	gamesContainer.setAttribute('class', 'hide games-container');
+	for(var i=0;i<links.length;i++){
+		if (links[i].class.indexOf('games-toggle') > -1) {
+			var d = document.createElement('div');
+			var icon = document.createElement('span');
+			var expando = document.createElement('span');
+			var splitter = document.createElement('span');
+			var label = document.createElement('div');
+			icon.setAttribute('class', 'icon ' + links[i].iclass);
+			expando.setAttribute('class', 'expando');
+			splitter.setAttribute('class', 'splitter');
+			label.setAttribute('class', 'label');
+			d.setAttribute('class', links[i].class);
+			label.innerText = links[i].text;
+			d.href = links[i].url;
+			d.appendChild(label);
+			d.appendChild(icon);
+			d.appendChild(expando);
+			container.appendChild(d);
+		} else {
+			var a = document.createElement('a');
+			var icon = document.createElement('span');
+			var splitter = document.createElement('span');
+			var label = document.createElement('div');
+			icon.setAttribute('class', 'icon ' + links[i].iclass);
+			splitter.setAttribute('class', 'splitter');
+			label.setAttribute('class', 'label');
+			if(links[i].url.indexOf('void')<0){
+				a.target = '_blank';
+			}
+			label.innerText = links[i].text;
+			a.href = links[i].url;
+			a.setAttribute('class', links[i].class);
+			a.appendChild(label);
+			a.appendChild(icon);
+			if (links[i].class.indexOf('game') > -1) {
+				gamesContainer.appendChild(a);
+			} else {
+				container.appendChild(a);
+			}
+		}
+	}
+
+	var gamesToggle = document.getElementsByClassName('games-toggle')[0];
+	gamesToggle.insertAdjacentHTML('afterEnd', gamesContainer.outerHTML);
+
+	gamesToggle.addEventListener('click', function () {
+		var gamesContainer = document.querySelector('.games-container');
+		var gamesToggle = document.querySelector('.games-toggle');
+		if (gamesContainer.getAttribute('class').indexOf('hide') > -1 ) {
+			gamesContainer.classList.remove('hide');
+		} else {
+			gamesContainer.classList.add('hide');
+		}
+		if (gamesToggle.getAttribute('class').indexOf('toggled') > -1 ) {
+			gamesToggle.classList.remove('toggled');
+		} else {
+			gamesToggle.classList.add('toggled');
+		}
+	}, false)
+</script>
+</body>
+
+</html>

@@ -1,8 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/display-name */
 import React from 'react';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import { useTable, usePagination, useSortBy } from 'react-table';
