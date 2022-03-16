@@ -1,4 +1,3 @@
-/* eslint-disable prefer-rest-params */
 import React from 'react';
 import ParticleImage, { forces, Vector } from 'react-particle-image';
 import { useWindowSize } from 'rooks';

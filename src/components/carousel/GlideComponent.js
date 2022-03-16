@@ -1,4 +1,3 @@
-// eslint-disable react/forbid-prop-types
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Glide from '@glidejs/glide';
@@ -47,13 +46,11 @@ function GlideComponent(props) {
     return () => {
       destroyGlide();
     };
-    /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, []);
 
   const renderDots = () => {
     const total = React.Children.count(children);
     const dots = [];
-    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < total; i++) {
       dots.push(
         <button
@@ -69,13 +66,10 @@ function GlideComponent(props) {
 
   return (
     <div>
-      {/* eslint-disable-next-line no-return-assign */}
       <div className="glide" ref={(node) => (carousel = node)}>
         <div data-glide-el="track" className="glide__track">
-          {/* eslint-disable-next-line react/destructuring-assignment */}
           <div className="glide__slides">{props.children}</div>
         </div>
-        {/* eslint-disable-next-line react/destructuring-assignment */}
         {!props.settings.hideNav && (
           <div className="glide__arrows slider-nav" data-glide-el="controls">
             <button
@@ -132,11 +126,8 @@ GlideComponent.propTypes = {
     rewindDuration: PropTypes.number,
     animationTimingFunc: PropTypes.string,
     direction: PropTypes.string,
-    // eslint-disable-next-line react/forbid-prop-types
     peek: PropTypes.object,
-    // eslint-disable-next-line react/forbid-prop-types
     breakpoints: PropTypes.object,
-    // eslint-disable-next-line react/forbid-prop-types
     classes: PropTypes.object,
     throttle: PropTypes.number,
   }),

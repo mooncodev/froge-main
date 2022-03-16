@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key, react/no-danger */
 import React, { useState, useEffect, useRef } from 'react';
 import { Nav, NavItem, TabContent, TabPane } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
@@ -374,11 +373,10 @@ const Home = () => {
                       <br />
                       Hope you enjoy it!
                     </p>
-                    {/* eslint-disable-next-line react/jsx-no-target-blank */}
                     <a
                       className="btn btn-light btn-xl mr-2 mb-2"
                       href={appRoot}
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                     >
                       LAUNCH APP
                       <i className="simple-icon-arrow-right" />
@@ -386,8 +384,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-12 col-xl-7 offset-xl-1 col-lg-7 col-md-6  d-none d-md-block">
-                  {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                  <a href={appRoot} target="_blank">
+                  <a href={appRoot} target="_blank" rel="noreferrer">
                     <img
                       alt="hero"
                       src="/assets/img/landing-page/home-hero.png"
@@ -401,7 +398,6 @@ const Home = () => {
                   <div className="home-carousel">
                     <GlideComponent settings={slideSettings}>
                       {slideItemsRoadmap.map((f, index) => (
-                        // eslint-disable-next-line react/no-array-index-key
                         <div key={`slide_${index}`} className="card">
                           <div className="card-body text-center">
                             <div>
@@ -447,7 +443,6 @@ const Home = () => {
                 </div>
               </div>
               {features.map((feature, i) => (
-                // eslint-disable-next-line react/no-array-index-key
                 <div key={`feature_${i}`}>
                   {i % 2 === 0 && (
                     <div className="row feature-row">

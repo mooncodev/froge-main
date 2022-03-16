@@ -17,7 +17,7 @@ const ViewHome = React.lazy(() =>
   import(/* webpackChunkName: "views" */ './views/home')
 );
 const ViewApp = React.lazy(() =>
-  import(/* webpackChunkName: "views-app" */ './views/app')
+  import(/* webpackChunkName: "views-app" */ './views/dapp')
 );
 
 const ViewError = React.lazy(() =>

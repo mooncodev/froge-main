@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactDOM from 'react-dom';
@@ -28,18 +27,15 @@ class Sidebar extends Component {
     };
   }
 
-  // eslint-disable-next-line react/sort-comp
   handleWindowResize = (event) => {
     if (event && !event.isTrusted) {
       return;
     }
     const { containerClassnames } = this.props;
     const nextClasses = this.getMenuClassesForResize(containerClassnames);
-    // eslint-disable-next-line react/destructuring-assignment
     this.props.setContainerClassnames(
       0,
       nextClasses.join(' '),
-      // eslint-disable-next-line react/destructuring-assignment
       this.props.selectedMenuHasSubItems
     );
   };
@@ -114,7 +110,6 @@ class Sidebar extends Component {
 
   toggle = () => {
     const hasSubItems = this.getIsHasSubItem();
-    // eslint-disable-next-line react/destructuring-assignment
     this.props.changeSelectedMenuHasSubItems(hasSubItems);
     const { containerClassnames, menuClickCount } = this.props;
     const currentClasses = containerClassnames
@@ -151,7 +146,6 @@ class Sidebar extends Component {
       clickIndex = 0;
     }
     if (clickIndex >= 0) {
-      // eslint-disable-next-line react/destructuring-assignment
       this.props.setContainerClassnames(
         clickIndex,
         containerClassnames,
@@ -219,7 +213,6 @@ class Sidebar extends Component {
           },
           callback
         );
-        // eslint-disable-next-line react/destructuring-assignment
       } else if (this.state.selectedParentMenu === '') {
         this.setState(
           {
@@ -233,7 +226,6 @@ class Sidebar extends Component {
 
   setHasSubItemStatus = () => {
     const hasSubmenu = this.getIsHasSubItem();
-    // eslint-disable-next-line react/destructuring-assignment
     this.props.changeSelectedMenuHasSubItems(hasSubmenu);
     this.toggle();
   };
@@ -246,9 +238,7 @@ class Sidebar extends Component {
     return false;
   };
 
-  // eslint-disable-next-line react/sort-comp
   componentDidUpdate(prevProps) {
-    // eslint-disable-next-line react/destructuring-assignment
     if (this.props.location.pathname !== prevProps.location.pathname) {
       this.setSelectedLiActive(this.setHasSubItemStatus);
 
@@ -272,7 +262,6 @@ class Sidebar extends Component {
   openSubMenu = (e, menuItem) => {
     const selectedParent = menuItem.id;
     const hasSubMenu = menuItem.subs && menuItem.subs.length > 0;
-    // eslint-disable-next-line react/destructuring-assignment
     this.props.changeSelectedMenuHasSubItems(hasSubMenu);
     if (!hasSubMenu) {
       this.setState({
@@ -293,24 +282,20 @@ class Sidebar extends Component {
           currentClasses.includes('menu-sub-hidden') &&
           (menuClickCount === 2 || menuClickCount === 0)
         ) {
-          // eslint-disable-next-line react/destructuring-assignment
           this.props.setContainerClassnames(3, containerClassnames, hasSubMenu);
         } else if (
           currentClasses.includes('menu-hidden') &&
           (menuClickCount === 1 || menuClickCount === 3)
         ) {
-          // eslint-disable-next-line react/destructuring-assignment
           this.props.setContainerClassnames(2, containerClassnames, hasSubMenu);
         } else if (
           currentClasses.includes('menu-default') &&
           !currentClasses.includes('menu-sub-hidden') &&
           (menuClickCount === 1 || menuClickCount === 3)
         ) {
-          // eslint-disable-next-line react/destructuring-assignment
           this.props.setContainerClassnames(0, containerClassnames, hasSubMenu);
         }
       } else {
-        // eslint-disable-next-line react/destructuring-assignment
         this.props.addContainerClassname(
           'sub-show-temporary',
           containerClassnames
@@ -339,7 +324,6 @@ class Sidebar extends Component {
     return false;
   };
 
-  // eslint-disable-next-line no-shadow
   filteredList = (menuItems) => {
     const { currentUser } = this.props;
     if (currentUser) {
@@ -412,11 +396,8 @@ class Sidebar extends Component {
                       key={item.id}
                       className={classnames({
                         'd-block':
-                          // eslint-disable-next-line react/destructuring-assignment
                           (this.state.selectedParentMenu === item.id &&
-                            // eslint-disable-next-line react/destructuring-assignment
                             this.state.viewingParentMenu === '') ||
-                          // eslint-disable-next-line react/destructuring-assignment
                           this.state.viewingParentMenu === item.id,
                       })}
                       data-parent={item.id}
@@ -432,7 +413,6 @@ class Sidebar extends Component {
                                   : ''
                               }`}
                             >
-                              {/* eslint-disable-next-line no-nested-ternary */}
                               {sub.newWindow ? (
                                 <a
                                   href={sub.to}
