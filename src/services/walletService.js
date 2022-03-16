@@ -1,7 +1,7 @@
 import { BehaviorSubject  } from 'rxjs';
 import { getCurrentUser } from 'helpers/Utils';
-import Web3 from "web3";
-import Web3Modal from "web3modal";//https://npm.io/package/web3modal
+import Web3 from 'web3';
+import Web3Modal from 'web3modal';//https://npm.io/package/web3modal
 
 
 const subject = new BehaviorSubject();
@@ -46,10 +46,10 @@ export const initWeb3 = async()=>{
   };
 
   const web3Modal = new Web3Modal({
-    network: "mainnet", // optional
+    network: 'mainnet', // optional
     cacheProvider: true, // optional
     providerOptions, // required
-    theme: "dark",
+    theme: 'dark',
     // theme: {
     //   background: "rgb(39, 49, 56)",
     //   main: "rgb(199, 199, 199)",
@@ -64,22 +64,22 @@ export const initWeb3 = async()=>{
   const web3 = new Web3(provider);
 
 // Subscribe to accounts change
-  provider.on("accountsChanged", (accounts) => {
+  provider.on('accountsChanged', (accounts) => {
     console.log(accounts);
   });
 
 // Subscribe to chainId change
-  provider.on("chainChanged", (chainId) => {
+  provider.on('chainChanged', (chainId) => {
     console.log(chainId);
   });
 
 // Subscribe to provider connection
-  provider.on("connect", (info) => {
+  provider.on('connect', (info) => {
     console.log(info);
   });
 
 // Subscribe to provider disconnection
-  provider.on("disconnect", (error) => {
+  provider.on('disconnect', (error) => {
     console.log(error);
   });
 

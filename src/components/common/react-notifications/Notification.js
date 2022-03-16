@@ -43,6 +43,7 @@ const Notification = ({
   ]);
   const titleHtml = title ? <h4 className="title">{title}</h4> : null;
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
     <div className={className} onClick={() => handleClick()}>
       <div className="notification-message" role="alert">
         {titleHtml}

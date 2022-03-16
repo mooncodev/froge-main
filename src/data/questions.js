@@ -2,7 +2,7 @@ const detailsQuestionsData = [
   {
     question: '1. Richardson beer labore wes anderson cred nesciunt?',
     answer:
-      "Anim pariatur cliche reprehenderit, enim eiusmod highlife accusamus terry richardson ad squid. 3 wolf moonofficia aute, non cupidatat skateboard dolor brunch. Brunch 3wolf moon tempor, sunt aliqua put a bird on it squidsingle- origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wesanderson cred nesciunt sapiente ea proident.Ad veganexcepteur butcher vice lomo.Leggings occaecat craftbeer farm - to - table, raw denim aesthetic synth nesciuntyou probably haven't heard of them accusamus laboresustainable VHS.",
+      'Anim pariatur cliche reprehenderit, enim eiusmod highlife accusamus terry richardson ad squid. 3 wolf moonofficia aute, non cupidatat skateboard dolor brunch. Brunch 3wolf moon tempor, sunt aliqua put a bird on it squidsingle- origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wesanderson cred nesciunt sapiente ea proident.Ad veganexcepteur butcher vice lomo.Leggings occaecat craftbeer farm - to - table, raw denim aesthetic synth nesciuntyou probably haven\'t heard of them accusamus laboresustainable VHS.',
     key: 'q1',
   },
   {
@@ -14,7 +14,7 @@ const detailsQuestionsData = [
   {
     question: '3. Sunt aliqua put a bird on it squid?',
     answer:
-      "Brunch 3wolf moon tempor, sunt aliqua put a bird on it squidsingle-origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wesanderson cred nesciunt sapiente ea proident. Ad veganexcepteur butcher vice lomo. Leggings occaecat craftbeer farm-to-table, raw denim aesthetic synth nesciuntyou probably haven't heard of them accusamus laboresustainable VHS.",
+      'Brunch 3wolf moon tempor, sunt aliqua put a bird on it squidsingle-origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wesanderson cred nesciunt sapiente ea proident. Ad veganexcepteur butcher vice lomo. Leggings occaecat craftbeer farm-to-table, raw denim aesthetic synth nesciuntyou probably haven\'t heard of them accusamus laboresustainable VHS.',
     key: 'q3',
   },
   {
